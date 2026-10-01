@@ -1,0 +1,6773 @@
+{
+  "metadata": {
+    "source_snapshot": "20260630_200738",
+    "feed_valid_from": "2026-06-27",
+    "feed_valid_to": "2026-07-29",
+    "station_count": 324,
+    "edge_count": 385,
+    "attribution": "Île-de-France Mobilités / ITO World GTFS export"
+  },
+  "lines": [
+    {
+      "id": "34915",
+      "name": "1",
+      "color": "#FFBE00"
+    },
+    {
+      "id": "15094",
+      "name": "2",
+      "color": "#0055C8"
+    },
+    {
+      "id": "15091",
+      "name": "3",
+      "color": "#6E6E00"
+    },
+    {
+      "id": "15097",
+      "name": "3B",
+      "color": "#82C8E6"
+    },
+    {
+      "id": "15061",
+      "name": "4",
+      "color": "#A0006E"
+    },
+    {
+      "id": "15098",
+      "name": "5",
+      "color": "#FF5A00"
+    },
+    {
+      "id": "15215",
+      "name": "6",
+      "color": "#82DC73"
+    },
+    {
+      "id": "15092",
+      "name": "7",
+      "color": "#FF82B4"
+    },
+    {
+      "id": "8567",
+      "name": "7B",
+      "color": "#82DC73"
+    },
+    {
+      "id": "15093",
+      "name": "8",
+      "color": "#D282BE"
+    },
+    {
+      "id": "15095",
+      "name": "9",
+      "color": "#D2D200"
+    },
+    {
+      "id": "15131",
+      "name": "10",
+      "color": "#DC9600"
+    },
+    {
+      "id": "8562",
+      "name": "11",
+      "color": "#6E491E"
+    },
+    {
+      "id": "8563",
+      "name": "12",
+      "color": "#00643C"
+    },
+    {
+      "id": "15096",
+      "name": "13",
+      "color": "#82C8E6"
+    },
+    {
+      "id": "8818",
+      "name": "14",
+      "color": "#640082"
+    }
+  ],
+  "stations": [
+    {
+      "id": "ITOAUTO100026",
+      "name": "Les Sablons",
+      "normalized_names": [
+        "les sablons"
+      ],
+      "latitude": 48.88083,
+      "longitude": 2.2722032857142858,
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "id": "ITOAUTO101637",
+      "name": "Aimé Césaire",
+      "normalized_names": [
+        "aime cesaire"
+      ],
+      "latitude": 48.9080295,
+      "longitude": 2.3776491666666666,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "ITOAUTO104943",
+      "name": "Saint-Ouen",
+      "normalized_names": [
+        "saint ouen"
+      ],
+      "latitude": 48.9045056,
+      "longitude": 2.3217286666666666,
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "id": "ITOAUTO112960",
+      "name": "Aéroport d’Orly (Terminaux 1-2-3)",
+      "normalized_names": [
+        "aeroport d orly terminaux 1 2 3"
+      ],
+      "latitude": 48.728422,
+      "longitude": 2.3613693529411766,
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "id": "ITOAUTO116129",
+      "name": "Montreuil - Hôpital",
+      "normalized_names": [
+        "montreuil hopital"
+      ],
+      "latitude": 48.87797164285714,
+      "longitude": 2.4545482142857145,
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "id": "ITOAUTO116624",
+      "name": "Hôpital Bicêtre",
+      "normalized_names": [
+        "hopital bicetre"
+      ],
+      "latitude": 48.810069799999994,
+      "longitude": 2.349944,
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "id": "ITOAUTO116628",
+      "name": "L'Haÿ-les-Roses",
+      "normalized_names": [
+        "l hay les roses"
+      ],
+      "latitude": 48.7755404,
+      "longitude": 2.3544026,
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "id": "ITOAUTO119593",
+      "name": "Coteaux Beauclair",
+      "normalized_names": [
+        "coteaux beauclair"
+      ],
+      "latitude": 48.881994166666665,
+      "longitude": 2.4681375,
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "id": "ITOAUTO119594",
+      "name": "La Dhuys",
+      "normalized_names": [
+        "la dhuys"
+      ],
+      "latitude": 48.877858125,
+      "longitude": 2.46539775,
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "id": "ITOAUTO119595",
+      "name": "Serge Gainsbourg",
+      "normalized_names": [
+        "serge gainsbourg"
+      ],
+      "latitude": 48.881291000000004,
+      "longitude": 2.4275159166666667,
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "id": "ITOAUTO120057",
+      "name": "Villejuif - Gustave Roussy",
+      "normalized_names": [
+        "villejuif gustave roussy"
+      ],
+      "latitude": 48.793156363636356,
+      "longitude": 2.349105454545455,
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "id": "ITOAUTO120222",
+      "name": "Robespierre",
+      "normalized_names": [
+        "robespierre"
+      ],
+      "latitude": 48.85566083333333,
+      "longitude": 2.4226293333333335,
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "id": "ITOAUTO120356",
+      "name": "Saint-Denis - Pleyel",
+      "normalized_names": [
+        "saint denis pleyel"
+      ],
+      "latitude": 48.917902857142856,
+      "longitude": 2.3463634285714288,
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "id": "ITOAUTO121276",
+      "name": "Saint-Philippe-du-Roule",
+      "normalized_names": [
+        "saint philippe du roule"
+      ],
+      "latitude": 48.87236766666667,
+      "longitude": 2.3101965,
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "id": "ITOAUTO129561",
+      "name": "La Courneuve - 8 Mai 1945",
+      "normalized_names": [
+        "la courneuve 8 mai 1945"
+      ],
+      "latitude": 48.920757,
+      "longitude": 2.410638,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "ITOAUTO129562",
+      "name": "Vaugirard",
+      "normalized_names": [
+        "vaugirard"
+      ],
+      "latitude": 48.83958988888889,
+      "longitude": 2.301016222222222,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "ITOAUTO133130",
+      "name": "École Vétérinaire de Maisons-Alfort",
+      "normalized_names": [
+        "ecole veterinaire de maisons alfort"
+      ],
+      "latitude": 48.81463125,
+      "longitude": 2.422875875,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "ITOAUTO134773",
+      "name": "Chevilly-Larue (Marché International)",
+      "normalized_names": [
+        "chevilly larue marche international"
+      ],
+      "latitude": 48.75899581818182,
+      "longitude": 2.3665886363636366,
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "id": "ITOAUTO134774",
+      "name": "Thiais - Orly (Pont de Rungis)",
+      "normalized_names": [
+        "thiais orly pont de rungis"
+      ],
+      "latitude": 48.74720464285714,
+      "longitude": 2.3722595714285717,
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "id": "ITOAUTO135730",
+      "name": "Neuilly - Porte Maillot",
+      "normalized_names": [
+        "neuilly porte maillot"
+      ],
+      "latitude": 48.87783042307693,
+      "longitude": 2.282894423076923,
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "id": "ITOAUTO135844",
+      "name": "Charles de Gaulle - Étoile",
+      "normalized_names": [
+        "charles de gaulle etoile"
+      ],
+      "latitude": 48.874180224999996,
+      "longitude": 2.295363525,
+      "line_ids": [
+        "15094",
+        "15215",
+        "34915"
+      ]
+    },
+    {
+      "id": "ITOAUTO135846",
+      "name": "Asnières - Gennevilliers - Les Courtilles",
+      "normalized_names": [
+        "asnieres gennevilliers les courtilles"
+      ],
+      "latitude": 48.93057317647059,
+      "longitude": 2.2837916470588233,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "ITOAUTO135849",
+      "name": "Châtillon - Montrouge",
+      "normalized_names": [
+        "chatillon montrouge"
+      ],
+      "latitude": 48.81076505882353,
+      "longitude": 2.301891,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "ITOAUTO137248",
+      "name": "Saint-Denis - Porte de Paris",
+      "normalized_names": [
+        "saint denis porte de paris"
+      ],
+      "latitude": 48.92975623076923,
+      "longitude": 2.356535076923077,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "ITOAUTO63174",
+      "name": "Gare Montparnasse",
+      "normalized_names": [
+        "gare montparnasse"
+      ],
+      "latitude": 48.841388375,
+      "longitude": 2.3204337083333333,
+      "line_ids": [
+        "15096",
+        "15215",
+        "8563"
+      ]
+    },
+    {
+      "id": "ITOAUTO64042",
+      "name": "Rosny Bois Perrier",
+      "normalized_names": [
+        "rosny bois perrier"
+      ],
+      "latitude": 48.88285281818182,
+      "longitude": 2.4811741818181816,
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "id": "ITOAUTO66713",
+      "name": "Pont Cardinet",
+      "normalized_names": [
+        "pont cardinet"
+      ],
+      "latitude": 48.8882956,
+      "longitude": 2.3147553,
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "id": "ITOAUTO68811",
+      "name": "Saint-Jacques",
+      "normalized_names": [
+        "saint jacques"
+      ],
+      "latitude": 48.832944749999996,
+      "longitude": 2.336948,
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "id": "ITOAUTO68812",
+      "name": "Denfert-Rochereau",
+      "normalized_names": [
+        "denfert rochereau"
+      ],
+      "latitude": 48.833754166666665,
+      "longitude": 2.332304833333333,
+      "line_ids": [
+        "15061",
+        "15215"
+      ]
+    },
+    {
+      "id": "ITOAUTO69075",
+      "name": "Porte de Pantin",
+      "normalized_names": [
+        "porte de pantin"
+      ],
+      "latitude": 48.88875457142857,
+      "longitude": 2.3935189285714285,
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "id": "ITOAUTO69077",
+      "name": "Porte d'Orléans",
+      "normalized_names": [
+        "porte d orleans"
+      ],
+      "latitude": 48.82298411111111,
+      "longitude": 2.3253261666666667,
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "id": "ITOAUTO69538",
+      "name": "Anatole France",
+      "normalized_names": [
+        "anatole france"
+      ],
+      "latitude": 48.892104999999994,
+      "longitude": 2.285003833333333,
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "id": "ITOAUTO69540",
+      "name": "Gabriel Péri",
+      "normalized_names": [
+        "gabriel peri"
+      ],
+      "latitude": 48.916401263157894,
+      "longitude": 2.2945243684210523,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "ITOAUTO69574",
+      "name": "Strasbourg - Saint-Denis",
+      "normalized_names": [
+        "strasbourg saint denis"
+      ],
+      "latitude": 48.8694672,
+      "longitude": 2.3537528,
+      "line_ids": [
+        "15061",
+        "15093",
+        "15095"
+      ]
+    },
+    {
+      "id": "ITOAUTO69871",
+      "name": "Porte d'Ivry",
+      "normalized_names": [
+        "porte d ivry"
+      ],
+      "latitude": 48.82151433333333,
+      "longitude": 2.369543888888889,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "ITOAUTO69879",
+      "name": "Mabillon",
+      "normalized_names": [
+        "mabillon"
+      ],
+      "latitude": 48.85287939999999,
+      "longitude": 2.3354597999999998,
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "id": "ITOAUTO69893",
+      "name": "Philippe Auguste",
+      "normalized_names": [
+        "philippe auguste"
+      ],
+      "latitude": 48.8581686,
+      "longitude": 2.3902197999999997,
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "id": "ITOAUTO69931",
+      "name": "Simplon",
+      "normalized_names": [
+        "simplon"
+      ],
+      "latitude": 48.89404866666666,
+      "longitude": 2.3476236666666668,
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "id": "ITOAUTO69943",
+      "name": "Rue Saint-Maur",
+      "normalized_names": [
+        "rue saint maur"
+      ],
+      "latitude": 48.86414671428572,
+      "longitude": 2.380261142857143,
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "id": "ITOAUTO74618",
+      "name": "Franklin D. Roosevelt",
+      "normalized_names": [
+        "franklin d roosevelt"
+      ],
+      "latitude": 48.86916183333333,
+      "longitude": 2.3087706666666667,
+      "line_ids": [
+        "15095",
+        "34915"
+      ]
+    },
+    {
+      "id": "ITOAUTO74620",
+      "name": "Bobigny - Pantin - Raymond Queneau",
+      "normalized_names": [
+        "bobigny pantin raymond queneau"
+      ],
+      "latitude": 48.89535254545455,
+      "longitude": 2.4260004545454548,
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "id": "ITOAUTO75921",
+      "name": "Télégraphe",
+      "normalized_names": [
+        "telegraphe"
+      ],
+      "latitude": 48.8753974,
+      "longitude": 2.3984753000000003,
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "id": "ITOAUTO75923",
+      "name": "Bolivar",
+      "normalized_names": [
+        "bolivar"
+      ],
+      "latitude": 48.880767,
+      "longitude": 2.37405875,
+      "line_ids": [
+        "8567"
+      ]
+    },
+    {
+      "id": "ITOAUTO76473",
+      "name": "Corvisart",
+      "normalized_names": [
+        "corvisart"
+      ],
+      "latitude": 48.82978714285714,
+      "longitude": 2.349529285714286,
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "id": "ITOAUTO76474",
+      "name": "Poissonnière",
+      "normalized_names": [
+        "poissonniere"
+      ],
+      "latitude": 48.87725700000001,
+      "longitude": 2.3490293333333336,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "ITOAUTO77238",
+      "name": "Boucicaut",
+      "normalized_names": [
+        "boucicaut"
+      ],
+      "latitude": 48.841087875,
+      "longitude": 2.287850625,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "ITOAUTO78694",
+      "name": "Villejuif Léo Lagrange",
+      "normalized_names": [
+        "villejuif leo lagrange"
+      ],
+      "latitude": 48.804594,
+      "longitude": 2.363937625,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "ITOAUTO78937",
+      "name": "Corentin Celton",
+      "normalized_names": [
+        "corentin celton"
+      ],
+      "latitude": 48.82709883333334,
+      "longitude": 2.2790291666666667,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "ITOAUTO78961",
+      "name": "Marcel Sembat",
+      "normalized_names": [
+        "marcel sembat"
+      ],
+      "latitude": 48.83384690909091,
+      "longitude": 2.2441286363636364,
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "id": "ITOAUTO78986",
+      "name": "Edgar Quinet",
+      "normalized_names": [
+        "edgar quinet"
+      ],
+      "latitude": 48.84098725,
+      "longitude": 2.325222,
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "id": "ITOAUTO78990",
+      "name": "Place Monge",
+      "normalized_names": [
+        "place monge"
+      ],
+      "latitude": 48.843354999999995,
+      "longitude": 2.3522592857142857,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "ITOAUTO78992",
+      "name": "Gare d'Austerlitz",
+      "normalized_names": [
+        "gare d austerlitz"
+      ],
+      "latitude": 48.841956950000004,
+      "longitude": 2.36583355,
+      "line_ids": [
+        "15098",
+        "15131"
+      ]
+    },
+    {
+      "id": "ITOAUTO78994",
+      "name": "Notre-Dame-des-Champs",
+      "normalized_names": [
+        "notre dame des champs"
+      ],
+      "latitude": 48.84486457142857,
+      "longitude": 2.328713857142857,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "ITOAUTO78995",
+      "name": "Chardon Lagache",
+      "normalized_names": [
+        "chardon lagache"
+      ],
+      "latitude": 48.84500766666667,
+      "longitude": 2.2666046666666664,
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "id": "ITOAUTO78997",
+      "name": "Boulogne Jean Jaurès",
+      "normalized_names": [
+        "boulogne jean jaures"
+      ],
+      "latitude": 48.842231500000004,
+      "longitude": 2.2390061666666665,
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "id": "ITOAUTO78999",
+      "name": "Cardinal Lemoine",
+      "normalized_names": [
+        "cardinal lemoine"
+      ],
+      "latitude": 48.8466234,
+      "longitude": 2.3514872,
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "id": "ITOAUTO79001",
+      "name": "Avenue Émile Zola",
+      "normalized_names": [
+        "avenue emile zola"
+      ],
+      "latitude": 48.8470084,
+      "longitude": 2.2949238000000003,
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "id": "ITOAUTO79003",
+      "name": "Église d'Auteuil",
+      "normalized_names": [
+        "eglise d auteuil"
+      ],
+      "latitude": 48.84721375,
+      "longitude": 2.2693365,
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "id": "ITOAUTO79025",
+      "name": "Michel-Ange - Auteuil",
+      "normalized_names": [
+        "michel ange auteuil"
+      ],
+      "latitude": 48.847891000000004,
+      "longitude": 2.2640975,
+      "line_ids": [
+        "15095",
+        "15131"
+      ]
+    },
+    {
+      "id": "ITOAUTO79029",
+      "name": "Saint-Germain-des-Prés",
+      "normalized_names": [
+        "saint germain des pres"
+      ],
+      "latitude": 48.8536362,
+      "longitude": 2.3337955999999997,
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "id": "ITOAUTO79031",
+      "name": "École Militaire",
+      "normalized_names": [
+        "ecole militaire"
+      ],
+      "latitude": 48.854785,
+      "longitude": 2.3062163333333334,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "ITOAUTO79043",
+      "name": "Rambuteau",
+      "normalized_names": [
+        "rambuteau"
+      ],
+      "latitude": 48.86111411111111,
+      "longitude": 2.353393111111111,
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "id": "ITOAUTO79048",
+      "name": "Tuileries",
+      "normalized_names": [
+        "tuileries"
+      ],
+      "latitude": 48.864430666666664,
+      "longitude": 2.329883,
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "id": "ITOAUTO79051",
+      "name": "Alma - Marceau",
+      "normalized_names": [
+        "alma marceau"
+      ],
+      "latitude": 48.864702333333334,
+      "longitude": 2.3011653333333335,
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "id": "ITOAUTO79053",
+      "name": "Rue de la Pompe",
+      "normalized_names": [
+        "rue de la pompe"
+      ],
+      "latitude": 48.86417133333333,
+      "longitude": 2.2780834999999997,
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "id": "ITOAUTO79054",
+      "name": "Arts et Métiers",
+      "normalized_names": [
+        "arts et metiers"
+      ],
+      "latitude": 48.8654244,
+      "longitude": 2.3566428999999998,
+      "line_ids": [
+        "15091",
+        "8562"
+      ]
+    },
+    {
+      "id": "ITOAUTO79055",
+      "name": "Palais Royal - Musée du Louvre",
+      "normalized_names": [
+        "palais royal musee du louvre"
+      ],
+      "latitude": 48.862627933333336,
+      "longitude": 2.3362493333333334,
+      "line_ids": [
+        "15092",
+        "34915"
+      ]
+    },
+    {
+      "id": "ITOAUTO79064",
+      "name": "Jacques Bonsergent",
+      "normalized_names": [
+        "jacques bonsergent"
+      ],
+      "latitude": 48.87083557142857,
+      "longitude": 2.3608988571428573,
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "id": "ITOAUTO79065",
+      "name": "Madeleine",
+      "normalized_names": [
+        "madeleine"
+      ],
+      "latitude": 48.87024078571428,
+      "longitude": 2.3254480714285712,
+      "line_ids": [
+        "15093",
+        "8563",
+        "8818"
+      ]
+    },
+    {
+      "id": "ITOAUTO79071",
+      "name": "Notre-Dame-de-Lorette",
+      "normalized_names": [
+        "notre dame de lorette"
+      ],
+      "latitude": 48.8760955,
+      "longitude": 2.3379165,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "ITOAUTO79087",
+      "name": "Gare du Nord",
+      "normalized_names": [
+        "gare du nord"
+      ],
+      "latitude": 48.88033263636364,
+      "longitude": 2.3558968181818183,
+      "line_ids": [
+        "15061",
+        "15098"
+      ]
+    },
+    {
+      "id": "ITOAUTO79092",
+      "name": "Wagram",
+      "normalized_names": [
+        "wagram"
+      ],
+      "latitude": 48.883834,
+      "longitude": 2.304419,
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "id": "ITOAUTO79118",
+      "name": "Marx Dormoy",
+      "normalized_names": [
+        "marx dormoy"
+      ],
+      "latitude": 48.890541000000006,
+      "longitude": 2.3598691666666665,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "ITOAUTO79135",
+      "name": "Bibliothèque François Mitterrand",
+      "normalized_names": [
+        "bibliotheque francois mitterrand"
+      ],
+      "latitude": 48.829689692307696,
+      "longitude": 2.377086076923077,
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "id": "ITOAUTO79137",
+      "name": "Porte de Charenton",
+      "normalized_names": [
+        "porte de charenton"
+      ],
+      "latitude": 48.83269244444445,
+      "longitude": 2.4003053333333337,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "ITOAUTO79148",
+      "name": "Daumesnil",
+      "normalized_names": [
+        "daumesnil"
+      ],
+      "latitude": 48.8394635625,
+      "longitude": 2.395630625,
+      "line_ids": [
+        "15093",
+        "15215"
+      ]
+    },
+    {
+      "id": "ITOAUTO79177",
+      "name": "Rue des Boulets",
+      "normalized_names": [
+        "rue des boulets"
+      ],
+      "latitude": 48.852146125000004,
+      "longitude": 2.389469375,
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "id": "ITOAUTO79190",
+      "name": "Alexandre Dumas",
+      "normalized_names": [
+        "alexandre dumas"
+      ],
+      "latitude": 48.85626325,
+      "longitude": 2.394473,
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "id": "ITOAUTO79196",
+      "name": "Voltaire",
+      "normalized_names": [
+        "voltaire"
+      ],
+      "latitude": 48.85795945454545,
+      "longitude": 2.3800195454545454,
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "id": "ITOAUTO79197",
+      "name": "Croix de Chavaux",
+      "normalized_names": [
+        "croix de chavaux"
+      ],
+      "latitude": 48.857921499999996,
+      "longitude": 2.4360431,
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "id": "ITOAUTO79209",
+      "name": "Père Lachaise",
+      "normalized_names": [
+        "pere lachaise"
+      ],
+      "latitude": 48.8627911,
+      "longitude": 2.3871527,
+      "line_ids": [
+        "15091",
+        "15094"
+      ]
+    },
+    {
+      "id": "ITOAUTO79213",
+      "name": "Oberkampf",
+      "normalized_names": [
+        "oberkampf"
+      ],
+      "latitude": 48.864715555555556,
+      "longitude": 2.368485444444444,
+      "line_ids": [
+        "15095",
+        "15098"
+      ]
+    },
+    {
+      "id": "ITOAUTO79217",
+      "name": "Ménilmontant",
+      "normalized_names": [
+        "menilmontant"
+      ],
+      "latitude": 48.86658275,
+      "longitude": 2.38335725,
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "id": "ITOAUTO79218",
+      "name": "Gallieni",
+      "normalized_names": [
+        "gallieni"
+      ],
+      "latitude": 48.865109000000004,
+      "longitude": 2.4165931428571428,
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "id": "ITOAUTO79221",
+      "name": "Pelleport",
+      "normalized_names": [
+        "pelleport"
+      ],
+      "latitude": 48.868284599999996,
+      "longitude": 2.4014538,
+      "line_ids": [
+        "15097"
+      ]
+    },
+    {
+      "id": "ITOAUTO79228",
+      "name": "Goncourt",
+      "normalized_names": [
+        "goncourt"
+      ],
+      "latitude": 48.86993425,
+      "longitude": 2.370762,
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "id": "ITOAUTO79239",
+      "name": "Buttes Chaumont",
+      "normalized_names": [
+        "buttes chaumont"
+      ],
+      "latitude": 48.8783455,
+      "longitude": 2.381555,
+      "line_ids": [
+        "8567"
+      ]
+    },
+    {
+      "id": "ITOAUTO79258",
+      "name": "Stalingrad",
+      "normalized_names": [
+        "stalingrad"
+      ],
+      "latitude": 48.88445035714285,
+      "longitude": 2.3678597142857143,
+      "line_ids": [
+        "15092",
+        "15094",
+        "15098"
+      ]
+    },
+    {
+      "id": "ITOAUTO79265",
+      "name": "Riquet",
+      "normalized_names": [
+        "riquet"
+      ],
+      "latitude": 48.888074599999996,
+      "longitude": 2.373765,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "ITOAUTO79273",
+      "name": "Hoche",
+      "normalized_names": [
+        "hoche"
+      ],
+      "latitude": 48.891213,
+      "longitude": 2.4022725555555553,
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "id": "ITOAUTO79284",
+      "name": "Corentin Cariou",
+      "normalized_names": [
+        "corentin cariou"
+      ],
+      "latitude": 48.8948056,
+      "longitude": 2.3823096,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "ITOAUTO79295",
+      "name": "Pont de Levallois - Bécon",
+      "normalized_names": [
+        "pont de levallois becon"
+      ],
+      "latitude": 48.897303699999995,
+      "longitude": 2.2798831,
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "id": "ITOAUTO79354",
+      "name": "Carrefour Pleyel",
+      "normalized_names": [
+        "carrefour pleyel"
+      ],
+      "latitude": 48.91949918181819,
+      "longitude": 2.343223090909091,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "ITOAUTO79409",
+      "name": "Basilique de Saint-Denis",
+      "normalized_names": [
+        "basilique de saint denis"
+      ],
+      "latitude": 48.9377506,
+      "longitude": 2.360084,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "ITOAUTO79421",
+      "name": "Saint-Denis - Université",
+      "normalized_names": [
+        "saint denis universite"
+      ],
+      "latitude": 48.94613588888889,
+      "longitude": 2.3644041111111114,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "ITOAUTO79798",
+      "name": "Odéon",
+      "normalized_names": [
+        "odeon"
+      ],
+      "latitude": 48.8520647,
+      "longitude": 2.3401441,
+      "line_ids": [
+        "15061",
+        "15131"
+      ]
+    },
+    {
+      "id": "ITOAUTO79800",
+      "name": "Saint-Michel Notre-Dame",
+      "normalized_names": [
+        "saint michel notre dame"
+      ],
+      "latitude": 48.85337121428571,
+      "longitude": 2.3446509285714288,
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "id": "ITOAUTO79801",
+      "name": "Chemin Vert",
+      "normalized_names": [
+        "chemin vert"
+      ],
+      "latitude": 48.857289800000004,
+      "longitude": 2.3681094,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "ITOAUTO79805",
+      "name": "Gare de Lyon",
+      "normalized_names": [
+        "gare de lyon"
+      ],
+      "latitude": 48.84469836842105,
+      "longitude": 2.3739369999999997,
+      "line_ids": [
+        "34915",
+        "8818"
+      ]
+    },
+    {
+      "id": "ITOAUTO79812",
+      "name": "Chevaleret",
+      "normalized_names": [
+        "chevaleret"
+      ],
+      "latitude": 48.83485314285714,
+      "longitude": 2.3677535714285716,
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "id": "ITOAUTO79814",
+      "name": "Michel-Ange - Molitor",
+      "normalized_names": [
+        "michel ange molitor"
+      ],
+      "latitude": 48.8450548,
+      "longitude": 2.2616807999999997,
+      "line_ids": [
+        "15095",
+        "15131"
+      ]
+    },
+    {
+      "id": "ITOAUTO79817",
+      "name": "Chaussée d'Antin - La Fayette",
+      "normalized_names": [
+        "chaussee d antin la fayette"
+      ],
+      "latitude": 48.87304369230769,
+      "longitude": 2.333595615384615,
+      "line_ids": [
+        "15092",
+        "15095"
+      ]
+    },
+    {
+      "id": "ITOAUTO79842",
+      "name": "Malakoff - Plateau de Vanves",
+      "normalized_names": [
+        "malakoff plateau de vanves"
+      ],
+      "latitude": 48.82245185714286,
+      "longitude": 2.298541,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "ITOAUTO80178",
+      "name": "Bir-Hakeim",
+      "normalized_names": [
+        "bir hakeim"
+      ],
+      "latitude": 48.854111599999996,
+      "longitude": 2.2893426000000003,
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "id": "ITOAUTO80181",
+      "name": "Porte Dauphine",
+      "normalized_names": [
+        "porte dauphine"
+      ],
+      "latitude": 48.8712037,
+      "longitude": 2.276484,
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "id": "ITOAUTO90761",
+      "name": "Château de Vincennes",
+      "normalized_names": [
+        "chateau de vincennes"
+      ],
+      "latitude": 48.8445074,
+      "longitude": 2.4394057,
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "id": "ITOAUTO90893",
+      "name": "Aubervilliers-Pantin Quatre Chemins",
+      "normalized_names": [
+        "aubervilliers pantin quatre chemins"
+      ],
+      "latitude": 48.903764625,
+      "longitude": 2.39214225,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "ITOAUTO91082",
+      "name": "Villejuif Paul Vaillant-Couturier",
+      "normalized_names": [
+        "villejuif paul vaillant couturier"
+      ],
+      "latitude": 48.796429428571436,
+      "longitude": 2.3681645714285713,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "ITOAUTO92401",
+      "name": "Plaisance",
+      "normalized_names": [
+        "plaisance"
+      ],
+      "latitude": 48.831711,
+      "longitude": 2.314018909090909,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "ITOAUTO93383",
+      "name": "Passy",
+      "normalized_names": [
+        "passy"
+      ],
+      "latitude": 48.857719333333335,
+      "longitude": 2.285298,
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "id": "ITOAUTO96052",
+      "name": "Créteil - Préfecture",
+      "normalized_names": [
+        "creteil prefecture"
+      ],
+      "latitude": 48.77978083333333,
+      "longitude": 2.4595788333333335,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "ITOAUTO96053",
+      "name": "Créteil - L'Échat",
+      "normalized_names": [
+        "creteil l echat"
+      ],
+      "latitude": 48.79648485714286,
+      "longitude": 2.4488438571428572,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "ITOAUTO96062",
+      "name": "La Défense",
+      "normalized_names": [
+        "la defense"
+      ],
+      "latitude": 48.8919204,
+      "longitude": 2.239357,
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "id": "ITOAUTO96457",
+      "name": "Charenton - Écoles",
+      "normalized_names": [
+        "charenton ecoles"
+      ],
+      "latitude": 48.821562461538456,
+      "longitude": 2.413648307692308,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "ITOAUTO96458",
+      "name": "Censier - Daubenton",
+      "normalized_names": [
+        "censier daubenton"
+      ],
+      "latitude": 48.8404052,
+      "longitude": 2.3515918,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "ITOAUTO96460",
+      "name": "Champs-Élysées - Clemenceau",
+      "normalized_names": [
+        "champs elysees clemenceau"
+      ],
+      "latitude": 48.867499,
+      "longitude": 2.313675,
+      "line_ids": [
+        "15096",
+        "34915"
+      ]
+    },
+    {
+      "id": "ITOAUTO96461",
+      "name": "Barbès - Rochechouart",
+      "normalized_names": [
+        "barbes rochechouart"
+      ],
+      "latitude": 48.88363208333333,
+      "longitude": 2.3499684166666666,
+      "line_ids": [
+        "15061",
+        "15094"
+      ]
+    },
+    {
+      "id": "ITOAUTO96462",
+      "name": "Péreire Levallois",
+      "normalized_names": [
+        "pereire levallois"
+      ],
+      "latitude": 48.885389875,
+      "longitude": 2.298574875,
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "id": "ITOAUTO96794",
+      "name": "Maisons-Alfort - Stade",
+      "normalized_names": [
+        "maisons alfort stade"
+      ],
+      "latitude": 48.809017833333336,
+      "longitude": 2.434673666666667,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "ITOAUTO96898",
+      "name": "Créteil - Université",
+      "normalized_names": [
+        "creteil universite"
+      ],
+      "latitude": 48.789860399999995,
+      "longitude": 2.450986,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "ITOAUTO96904",
+      "name": "Sully - Morland",
+      "normalized_names": [
+        "sully morland"
+      ],
+      "latitude": 48.85146088888889,
+      "longitude": 2.3622648888888893,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "ITOAUTO96905",
+      "name": "Sèvres - Babylone",
+      "normalized_names": [
+        "sevres babylone"
+      ],
+      "latitude": 48.8513755,
+      "longitude": 2.326509375,
+      "line_ids": [
+        "15131",
+        "8563"
+      ]
+    },
+    {
+      "id": "ITOAUTO96919",
+      "name": "Havre - Caumartin",
+      "normalized_names": [
+        "havre caumartin"
+      ],
+      "latitude": 48.87361077777778,
+      "longitude": 2.3278106666666667,
+      "line_ids": [
+        "15091",
+        "15095"
+      ]
+    },
+    {
+      "id": "ITOAUTO97021",
+      "name": "Front Populaire",
+      "normalized_names": [
+        "front populaire"
+      ],
+      "latitude": 48.906645142857144,
+      "longitude": 2.3659115714285717,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "ITOAUTO97022",
+      "name": "Guy Môquet",
+      "normalized_names": [
+        "guy moquet"
+      ],
+      "latitude": 48.89278191666667,
+      "longitude": 2.327398083333333,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "ITOAUTO97121",
+      "name": "Réaumur - Sébastopol",
+      "normalized_names": [
+        "reaumur sebastopol"
+      ],
+      "latitude": 48.86635111111111,
+      "longitude": 2.352144555555556,
+      "line_ids": [
+        "15061",
+        "15091"
+      ]
+    },
+    {
+      "id": "ITOAUTO97122",
+      "name": "Louvre - Rivoli",
+      "normalized_names": [
+        "louvre rivoli"
+      ],
+      "latitude": 48.86094675,
+      "longitude": 2.340449,
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "id": "ITOAUTO97123",
+      "name": "Cluny - La Sorbonne",
+      "normalized_names": [
+        "cluny la sorbonne"
+      ],
+      "latitude": 48.851077000000004,
+      "longitude": 2.344142125,
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "id": "ITOAUTO97125",
+      "name": "Faidherbe - Chaligny",
+      "normalized_names": [
+        "faidherbe chaligny"
+      ],
+      "latitude": 48.850139000000006,
+      "longitude": 2.3839961666666665,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "ITOAUTO97126",
+      "name": "Richard-Lenoir",
+      "normalized_names": [
+        "richard lenoir"
+      ],
+      "latitude": 48.85935283333333,
+      "longitude": 2.3717153333333334,
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "id": "ITOAUTO97128",
+      "name": "Maubert - Mutualité",
+      "normalized_names": [
+        "maubert mutualite"
+      ],
+      "latitude": 48.85006642857143,
+      "longitude": 2.3482705714285714,
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "id": "ITOAUTO97129",
+      "name": "La Motte-Picquet - Grenelle",
+      "normalized_names": [
+        "la motte picquet grenelle"
+      ],
+      "latitude": 48.8492708,
+      "longitude": 2.2986594666666664,
+      "line_ids": [
+        "15093",
+        "15131",
+        "15215"
+      ]
+    },
+    {
+      "id": "ITOAUTO97130",
+      "name": "Richelieu - Drouot",
+      "normalized_names": [
+        "richelieu drouot"
+      ],
+      "latitude": 48.871916999999996,
+      "longitude": 2.3386764999999996,
+      "line_ids": [
+        "15093",
+        "15095"
+      ]
+    },
+    {
+      "id": "ITOAUTO97131",
+      "name": "Trinité - d'Estienne d'Orves",
+      "normalized_names": [
+        "trinite d estienne d orves"
+      ],
+      "latitude": 48.87642916666667,
+      "longitude": 2.3328196666666665,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "ITOAUTO97132",
+      "name": "Lamarck - Caulaincourt",
+      "normalized_names": [
+        "lamarck caulaincourt"
+      ],
+      "latitude": 48.889686499999996,
+      "longitude": 2.33881775,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "ITOAUTO97133",
+      "name": "Marcadet - Poissonniers",
+      "normalized_names": [
+        "marcadet poissonniers"
+      ],
+      "latitude": 48.891124727272725,
+      "longitude": 2.3501187272727275,
+      "line_ids": [
+        "15061",
+        "8563"
+      ]
+    },
+    {
+      "id": "ITOAUTO97134",
+      "name": "Reuilly - Diderot",
+      "normalized_names": [
+        "reuilly diderot"
+      ],
+      "latitude": 48.84719755555555,
+      "longitude": 2.386093222222222,
+      "line_ids": [
+        "15093",
+        "34915"
+      ]
+    },
+    {
+      "id": "ITOAUTO97135",
+      "name": "Saint-Sébastien - Froissart",
+      "normalized_names": [
+        "saint sebastien froissart"
+      ],
+      "latitude": 48.8610498,
+      "longitude": 2.3672276,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "ITOAUTO97136",
+      "name": "Église de Pantin",
+      "normalized_names": [
+        "eglise de pantin"
+      ],
+      "latitude": 48.89334414285714,
+      "longitude": 2.413065142857143,
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "id": "ITOAUTO97140",
+      "name": "Malakoff - Rue Etienne Dolet",
+      "normalized_names": [
+        "malakoff rue etienne dolet"
+      ],
+      "latitude": 48.814880625,
+      "longitude": 2.296869125,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "ITOAUTO97141",
+      "name": "Maisons-Alfort - Les Juilliottes",
+      "normalized_names": [
+        "maisons alfort les juilliottes"
+      ],
+      "latitude": 48.803326142857145,
+      "longitude": 2.4455201428571427,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "ITOAUTO97151",
+      "name": "Etienne Marcel",
+      "normalized_names": [
+        "etienne marcel"
+      ],
+      "latitude": 48.863723444444446,
+      "longitude": 2.349684888888889,
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "id": "ITOAUTO97217",
+      "name": "Montparnasse Bienvenue",
+      "normalized_names": [
+        "montparnasse bienvenue"
+      ],
+      "latitude": 48.843853,
+      "longitude": 2.324329,
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "id": "ITOAUTO97325",
+      "name": "Montparnasse Bienvenue",
+      "normalized_names": [
+        "montparnasse bienvenue"
+      ],
+      "latitude": 48.843914,
+      "longitude": 2.324386,
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "id": "ITOAUTO97479",
+      "name": "Pernety",
+      "normalized_names": [
+        "pernety"
+      ],
+      "latitude": 48.833640714285714,
+      "longitude": 2.318622285714286,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "ITOAUTO99166",
+      "name": "Barbara",
+      "normalized_names": [
+        "barbara"
+      ],
+      "latitude": 48.809636000000005,
+      "longitude": 2.3174896666666664,
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "id": "ITOAUTO99201",
+      "name": "Bagneux - Lucie Aubrac",
+      "normalized_names": [
+        "bagneux lucie aubrac"
+      ],
+      "latitude": 48.80382775,
+      "longitude": 2.317624875,
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "id": "ITOAUTO99643",
+      "name": "Mairie d'Ivry",
+      "normalized_names": [
+        "mairie d ivry"
+      ],
+      "latitude": 48.81105528571429,
+      "longitude": 2.3839137142857143,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "PARIS106266",
+      "name": "Jussieu",
+      "normalized_names": [
+        "jussieu"
+      ],
+      "latitude": 48.84609414285715,
+      "longitude": 2.354783714285714,
+      "line_ids": [
+        "15092",
+        "15131"
+      ]
+    },
+    {
+      "id": "PARIS106267",
+      "name": "Botzaris",
+      "normalized_names": [
+        "botzaris"
+      ],
+      "latitude": 48.879509,
+      "longitude": 2.389054,
+      "line_ids": [
+        "8567"
+      ]
+    },
+    {
+      "id": "PARIS106268",
+      "name": "Ourcq",
+      "normalized_names": [
+        "ourcq"
+      ],
+      "latitude": 48.887144625,
+      "longitude": 2.3868940000000003,
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "id": "PARIS106269",
+      "name": "Bercy",
+      "normalized_names": [
+        "bercy"
+      ],
+      "latitude": 48.83941711764706,
+      "longitude": 2.3808152352941176,
+      "line_ids": [
+        "15215",
+        "8818"
+      ]
+    },
+    {
+      "id": "PARIS11029",
+      "name": "Mairie d'Aubervilliers",
+      "normalized_names": [
+        "mairie d aubervilliers"
+      ],
+      "latitude": 48.91392172727273,
+      "longitude": 2.3806512727272726,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "PARIS137744",
+      "name": "La Muette",
+      "normalized_names": [
+        "la muette"
+      ],
+      "latitude": 48.85808479999999,
+      "longitude": 2.274063,
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "id": "PARIS137745",
+      "name": "Commerce",
+      "normalized_names": [
+        "commerce"
+      ],
+      "latitude": 48.844593,
+      "longitude": 2.2938722,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "PARIS16027",
+      "name": "Porte de Clichy",
+      "normalized_names": [
+        "porte de clichy"
+      ],
+      "latitude": 48.894407,
+      "longitude": 2.3141310625,
+      "line_ids": [
+        "15096",
+        "8818"
+      ]
+    },
+    {
+      "id": "PARIS16028",
+      "name": "Gare de l'Est",
+      "normalized_names": [
+        "gare de l est"
+      ],
+      "latitude": 48.876544714285714,
+      "longitude": 2.3587748571428575,
+      "line_ids": [
+        "15061",
+        "15092",
+        "15098"
+      ]
+    },
+    {
+      "id": "PARIS16509",
+      "name": "Nation",
+      "normalized_names": [
+        "nation"
+      ],
+      "latitude": 48.84825532,
+      "longitude": 2.3962930399999998,
+      "line_ids": [
+        "15094",
+        "15095",
+        "15215",
+        "34915"
+      ]
+    },
+    {
+      "id": "PARIS166014",
+      "name": "Les Halles",
+      "normalized_names": [
+        "les halles"
+      ],
+      "latitude": 48.86255511111111,
+      "longitude": 2.3455097777777776,
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "id": "PARIS166017",
+      "name": "Saint-Paul (Le Marais)",
+      "normalized_names": [
+        "saint paul le marais"
+      ],
+      "latitude": 48.855221,
+      "longitude": 2.3607538,
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "id": "PARIS166018",
+      "name": "Raspail",
+      "normalized_names": [
+        "raspail"
+      ],
+      "latitude": 48.83895888888889,
+      "longitude": 2.3306315555555557,
+      "line_ids": [
+        "15061",
+        "15215"
+      ]
+    },
+    {
+      "id": "PARIS166020",
+      "name": "Saint-Placide",
+      "normalized_names": [
+        "saint placide"
+      ],
+      "latitude": 48.84681385714286,
+      "longitude": 2.3267205714285715,
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "id": "PARIS166021",
+      "name": "Saint-Sulpice",
+      "normalized_names": [
+        "saint sulpice"
+      ],
+      "latitude": 48.85126233333333,
+      "longitude": 2.331020833333333,
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "id": "PARIS166022",
+      "name": "Mouton-Duvernet",
+      "normalized_names": [
+        "mouton duvernet"
+      ],
+      "latitude": 48.83129066666667,
+      "longitude": 2.329730833333333,
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "id": "PARIS166025",
+      "name": "Tolbiac",
+      "normalized_names": [
+        "tolbiac"
+      ],
+      "latitude": 48.8262208,
+      "longitude": 2.3572168000000002,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "PARIS166027",
+      "name": "Le Peletier",
+      "normalized_names": [
+        "le peletier"
+      ],
+      "latitude": 48.87486175,
+      "longitude": 2.3400035,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "PARIS166028",
+      "name": "Fort d'Aubervilliers",
+      "normalized_names": [
+        "fort d aubervilliers"
+      ],
+      "latitude": 48.91467228571429,
+      "longitude": 2.4041632857142856,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "PARIS166032",
+      "name": "Saint-Fargeau",
+      "normalized_names": [
+        "saint fargeau"
+      ],
+      "latitude": 48.871788,
+      "longitude": 2.40433325,
+      "line_ids": [
+        "15097"
+      ]
+    },
+    {
+      "id": "PARIS166033",
+      "name": "Danube",
+      "normalized_names": [
+        "danube"
+      ],
+      "latitude": 48.88191675,
+      "longitude": 2.39349175,
+      "line_ids": [
+        "8567"
+      ]
+    },
+    {
+      "id": "PARIS166034",
+      "name": "Saint-Marcel",
+      "normalized_names": [
+        "saint marcel"
+      ],
+      "latitude": 48.838913777777776,
+      "longitude": 2.360889666666667,
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "id": "PARIS166036",
+      "name": "Campo-Formio",
+      "normalized_names": [
+        "campo formio"
+      ],
+      "latitude": 48.835783666666664,
+      "longitude": 2.3586561666666666,
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "id": "PARIS166042",
+      "name": "Vaneau",
+      "normalized_names": [
+        "vaneau"
+      ],
+      "latitude": 48.848834,
+      "longitude": 2.3212455,
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "id": "PARIS166044",
+      "name": "Mirabeau",
+      "normalized_names": [
+        "mirabeau"
+      ],
+      "latitude": 48.847139,
+      "longitude": 2.2730446,
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "id": "PARIS166046",
+      "name": "Boulogne Pont de Saint-Cloud",
+      "normalized_names": [
+        "boulogne pont de saint cloud"
+      ],
+      "latitude": 48.8408089,
+      "longitude": 2.2283586,
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "id": "PARIS166047",
+      "name": "Victor Hugo",
+      "normalized_names": [
+        "victor hugo"
+      ],
+      "latitude": 48.869913399999994,
+      "longitude": 2.2855936,
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "id": "PARIS166049",
+      "name": "Anvers",
+      "normalized_names": [
+        "anvers"
+      ],
+      "latitude": 48.882867,
+      "longitude": 2.3441020000000004,
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "id": "PARIS166050",
+      "name": "Parmentier",
+      "normalized_names": [
+        "parmentier"
+      ],
+      "latitude": 48.865365,
+      "longitude": 2.3745985,
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "id": "PARIS166053",
+      "name": "Ledru-Rollin",
+      "normalized_names": [
+        "ledru rollin"
+      ],
+      "latitude": 48.851375181818185,
+      "longitude": 2.3757028181818183,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "PARIS166054",
+      "name": "Filles du Calvaire",
+      "normalized_names": [
+        "filles du calvaire"
+      ],
+      "latitude": 48.8630448,
+      "longitude": 2.3665507999999997,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "PARIS166055",
+      "name": "Bonne Nouvelle",
+      "normalized_names": [
+        "bonne nouvelle"
+      ],
+      "latitude": 48.870487833333335,
+      "longitude": 2.3487681666666664,
+      "line_ids": [
+        "15093",
+        "15095"
+      ]
+    },
+    {
+      "id": "PARIS166056",
+      "name": "Lourmel",
+      "normalized_names": [
+        "lourmel"
+      ],
+      "latitude": 48.8387154,
+      "longitude": 2.2820968,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "PARIS166058",
+      "name": "Saint-Ambroise",
+      "normalized_names": [
+        "saint ambroise"
+      ],
+      "latitude": 48.86156777777777,
+      "longitude": 2.374510888888889,
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "id": "PARIS166060",
+      "name": "Porte de Saint-Cloud",
+      "normalized_names": [
+        "porte de saint cloud"
+      ],
+      "latitude": 48.838197615384615,
+      "longitude": 2.256824,
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "id": "PARIS166061",
+      "name": "Miromesnil",
+      "normalized_names": [
+        "miromesnil"
+      ],
+      "latitude": 48.87367644444444,
+      "longitude": 2.314808444444444,
+      "line_ids": [
+        "15095",
+        "15096"
+      ]
+    },
+    {
+      "id": "PARIS166062",
+      "name": "Charonne",
+      "normalized_names": [
+        "charonne"
+      ],
+      "latitude": 48.854888555555554,
+      "longitude": 2.3850126666666664,
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "id": "PARIS166065",
+      "name": "Mairie de Montreuil",
+      "normalized_names": [
+        "mairie de montreuil"
+      ],
+      "latitude": 48.86233977777778,
+      "longitude": 2.4416613333333332,
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "id": "PARIS166066",
+      "name": "Volontaires",
+      "normalized_names": [
+        "volontaires"
+      ],
+      "latitude": 48.8415704,
+      "longitude": 2.3079840000000003,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "PARIS166067",
+      "name": "Rue du Bac",
+      "normalized_names": [
+        "rue du bac"
+      ],
+      "latitude": 48.855809199999996,
+      "longitude": 2.3256684,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "PARIS166068",
+      "name": "Saint-Georges",
+      "normalized_names": [
+        "saint georges"
+      ],
+      "latitude": 48.878455200000005,
+      "longitude": 2.3375302000000002,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "PARIS166071",
+      "name": "Jules Joffrin",
+      "normalized_names": [
+        "jules joffrin"
+      ],
+      "latitude": 48.892539,
+      "longitude": 2.34446925,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "PARIS166072",
+      "name": "Convention",
+      "normalized_names": [
+        "convention"
+      ],
+      "latitude": 48.837267,
+      "longitude": 2.2965596666666666,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "PARIS166073",
+      "name": "Saint-François-Xavier",
+      "normalized_names": [
+        "saint francois xavier"
+      ],
+      "latitude": 48.85154175,
+      "longitude": 2.314281375,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "PARIS166074",
+      "name": "Porte de Saint-Ouen",
+      "normalized_names": [
+        "porte de saint ouen"
+      ],
+      "latitude": 48.89746861538462,
+      "longitude": 2.3291744615384613,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "PARIS166078",
+      "name": "Mairie de Saint-Ouen",
+      "normalized_names": [
+        "mairie de saint ouen"
+      ],
+      "latitude": 48.91209891666667,
+      "longitude": 2.3340029166666665,
+      "line_ids": [
+        "15096",
+        "8818"
+      ]
+    },
+    {
+      "id": "PARIS166081",
+      "name": "République",
+      "normalized_names": [
+        "republique"
+      ],
+      "latitude": 48.86764784,
+      "longitude": 2.36377304,
+      "line_ids": [
+        "15091",
+        "15093",
+        "15095",
+        "15098",
+        "8562"
+      ]
+    },
+    {
+      "id": "PARIS166085",
+      "name": "Mairie de Clichy",
+      "normalized_names": [
+        "mairie de clichy"
+      ],
+      "latitude": 48.90334825,
+      "longitude": 2.3056531666666666,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "PARIS166087",
+      "name": "Les Agnettes",
+      "normalized_names": [
+        "les agnettes"
+      ],
+      "latitude": 48.92313736363636,
+      "longitude": 2.286314,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "PARIS166088",
+      "name": "Solférino",
+      "normalized_names": [
+        "solferino"
+      ],
+      "latitude": 48.8584495,
+      "longitude": 2.3231649,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "PARIS166092",
+      "name": "Iéna",
+      "normalized_names": [
+        "iena"
+      ],
+      "latitude": 48.86470916666667,
+      "longitude": 2.2939976666666664,
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "id": "PARIS166094",
+      "name": "Cité",
+      "normalized_names": [
+        "cite"
+      ],
+      "latitude": 48.8552094,
+      "longitude": 2.3472276,
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "id": "PARIS166096",
+      "name": "Château d'Eau",
+      "normalized_names": [
+        "chateau d eau"
+      ],
+      "latitude": 48.87235025,
+      "longitude": 2.35620125,
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "id": "PARIS166097",
+      "name": "Alésia",
+      "normalized_names": [
+        "alesia"
+      ],
+      "latitude": 48.82828177777778,
+      "longitude": 2.3269722222222224,
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "id": "PARIS166100",
+      "name": "Pré-Saint-Gervais",
+      "normalized_names": [
+        "pre saint gervais"
+      ],
+      "latitude": 48.87999125,
+      "longitude": 2.398622,
+      "line_ids": [
+        "8567"
+      ]
+    },
+    {
+      "id": "PARIS166101",
+      "name": "Glacière",
+      "normalized_names": [
+        "glaciere"
+      ],
+      "latitude": 48.831024625,
+      "longitude": 2.343614625,
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "id": "PARIS166102",
+      "name": "Boissière",
+      "normalized_names": [
+        "boissiere"
+      ],
+      "latitude": 48.8669825,
+      "longitude": 2.2900745000000002,
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "id": "PARIS166103",
+      "name": "La Tour-Maubourg",
+      "normalized_names": [
+        "la tour maubourg"
+      ],
+      "latitude": 48.857726400000004,
+      "longitude": 2.3103114,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "PARIS166104",
+      "name": "Saint-Mandé",
+      "normalized_names": [
+        "saint mande"
+      ],
+      "latitude": 48.846337375,
+      "longitude": 2.418835,
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "id": "PARIS166105",
+      "name": "Porte d'Italie",
+      "normalized_names": [
+        "porte d italie"
+      ],
+      "latitude": 48.818856833333335,
+      "longitude": 2.3599822500000003,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "PARIS166110",
+      "name": "Pointe du Lac",
+      "normalized_names": [
+        "pointe du lac"
+      ],
+      "latitude": 48.76890154545454,
+      "longitude": 2.464146181818182,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "PARIS166118",
+      "name": "Mairie de Montrouge",
+      "normalized_names": [
+        "mairie de montrouge"
+      ],
+      "latitude": 48.81834992857143,
+      "longitude": 2.319937857142857,
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "id": "PARIS166121",
+      "name": "Villejuif - Louis Aragon",
+      "normalized_names": [
+        "villejuif louis aragon"
+      ],
+      "latitude": 48.7876627,
+      "longitude": 2.3675372,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "PARIS166889",
+      "name": "Romainville - Carnot",
+      "normalized_names": [
+        "romainville carnot"
+      ],
+      "latitude": 48.88344907692307,
+      "longitude": 2.4407626153846156,
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "id": "PARIS167848",
+      "name": "Invalides",
+      "normalized_names": [
+        "invalides"
+      ],
+      "latitude": 48.861476909090904,
+      "longitude": 2.314319818181818,
+      "line_ids": [
+        "15093",
+        "15096"
+      ]
+    },
+    {
+      "id": "PARIS174244",
+      "name": "Jules Joffrin",
+      "normalized_names": [
+        "jules joffrin"
+      ],
+      "latitude": 48.89249,
+      "longitude": 2.34432,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "PARIS193022",
+      "name": "Rome",
+      "normalized_names": [
+        "rome"
+      ],
+      "latitude": 48.882242250000004,
+      "longitude": 2.321146,
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "id": "PARIS194367",
+      "name": "Varenne",
+      "normalized_names": [
+        "varenne"
+      ],
+      "latitude": 48.8565075,
+      "longitude": 2.3150475,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "PARIS194369",
+      "name": "Bréguet-Sabin",
+      "normalized_names": [
+        "breguet sabin"
+      ],
+      "latitude": 48.8561782,
+      "longitude": 2.3702294,
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "id": "PARIS194494",
+      "name": "Falguière",
+      "normalized_names": [
+        "falguiere"
+      ],
+      "latitude": 48.844688250000004,
+      "longitude": 2.317536,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "PARIS194562",
+      "name": "Gare Saint-Lazare",
+      "normalized_names": [
+        "gare saint lazare"
+      ],
+      "latitude": 48.87581203333333,
+      "longitude": 2.3257574333333335,
+      "line_ids": [
+        "15091",
+        "15096",
+        "8563",
+        "8818"
+      ]
+    },
+    {
+      "id": "PARIS194630",
+      "name": "Porte de Clignancourt",
+      "normalized_names": [
+        "porte de clignancourt"
+      ],
+      "latitude": 48.8976788,
+      "longitude": 2.3448634999999998,
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "id": "PARIS194632",
+      "name": "Porte de la Villette",
+      "normalized_names": [
+        "porte de la villette"
+      ],
+      "latitude": 48.897674,
+      "longitude": 2.3862213,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "PARIS194634",
+      "name": "Porte Dorée",
+      "normalized_names": [
+        "porte doree"
+      ],
+      "latitude": 48.83509863636364,
+      "longitude": 2.4058055454545455,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "PARIS204776",
+      "name": "Pyrénées",
+      "normalized_names": [
+        "pyrenees"
+      ],
+      "latitude": 48.87393014285714,
+      "longitude": 2.3849975,
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "id": "PARIS206145",
+      "name": "Bobigny - Pablo Picasso",
+      "normalized_names": [
+        "bobigny pablo picasso"
+      ],
+      "latitude": 48.90703767741935,
+      "longitude": 2.449445870967742,
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "id": "PARIS208683",
+      "name": "Châtelet",
+      "normalized_names": [
+        "chatelet"
+      ],
+      "latitude": 48.85852708,
+      "longitude": 2.3473872399999998,
+      "line_ids": [
+        "15061",
+        "15092",
+        "34915",
+        "8562",
+        "8818"
+      ]
+    },
+    {
+      "id": "PARIS208684",
+      "name": "Pont Neuf",
+      "normalized_names": [
+        "pont neuf"
+      ],
+      "latitude": 48.85859466666667,
+      "longitude": 2.3421901666666667,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "PARIS85132",
+      "name": "Balard",
+      "normalized_names": [
+        "balard"
+      ],
+      "latitude": 48.836084,
+      "longitude": 2.27805925,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "PARIS85134",
+      "name": "Porte de Choisy",
+      "normalized_names": [
+        "porte de choisy"
+      ],
+      "latitude": 48.81983661538462,
+      "longitude": 2.3646113076923077,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "PARIS93383",
+      "name": "Temple",
+      "normalized_names": [
+        "temple"
+      ],
+      "latitude": 48.866618,
+      "longitude": 2.3614655,
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "id": "PARIS93400",
+      "name": "Quai de la Rapée",
+      "normalized_names": [
+        "quai de la rapee"
+      ],
+      "latitude": 48.84595771428571,
+      "longitude": 2.3673737142857143,
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "id": "PARIS94332",
+      "name": "Javel",
+      "normalized_names": [
+        "javel"
+      ],
+      "latitude": 48.846558800000004,
+      "longitude": 2.2780192,
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "id": "PARIS9438",
+      "name": "Opéra",
+      "normalized_names": [
+        "opera"
+      ],
+      "latitude": 48.87080616666666,
+      "longitude": 2.331854416666667,
+      "line_ids": [
+        "15091",
+        "15092",
+        "15093"
+      ]
+    },
+    {
+      "id": "PARIS9440",
+      "name": "La Chapelle",
+      "normalized_names": [
+        "la chapelle"
+      ],
+      "latitude": 48.8844292,
+      "longitude": 2.3600898,
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "id": "PARIS9445",
+      "name": "Porte de Vincennes",
+      "normalized_names": [
+        "porte de vincennes"
+      ],
+      "latitude": 48.84724492307692,
+      "longitude": 2.4087408461538464,
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "id": "PARIS9448",
+      "name": "George V",
+      "normalized_names": [
+        "george v"
+      ],
+      "latitude": 48.87207166666667,
+      "longitude": 2.3004995,
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "id": "PARIS9449",
+      "name": "Concorde",
+      "normalized_names": [
+        "concorde"
+      ],
+      "latitude": 48.86632105882353,
+      "longitude": 2.3230662352941174,
+      "line_ids": [
+        "15093",
+        "34915",
+        "8563"
+      ]
+    },
+    {
+      "id": "PARIS9450",
+      "name": "Argentine",
+      "normalized_names": [
+        "argentine"
+      ],
+      "latitude": 48.875489,
+      "longitude": 2.2896352,
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "id": "PARIS9451",
+      "name": "Bastille",
+      "normalized_names": [
+        "bastille"
+      ],
+      "latitude": 48.8529843125,
+      "longitude": 2.3690630625,
+      "line_ids": [
+        "15093",
+        "15098",
+        "34915"
+      ]
+    },
+    {
+      "id": "PARIS9456",
+      "name": "Vavin",
+      "normalized_names": [
+        "vavin"
+      ],
+      "latitude": 48.842051272727275,
+      "longitude": 2.329049909090909,
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "id": "PARIS9463",
+      "name": "Place d'Italie",
+      "normalized_names": [
+        "place d italie"
+      ],
+      "latitude": 48.83121290909091,
+      "longitude": 2.3556559090909093,
+      "line_ids": [
+        "15092",
+        "15098",
+        "15215"
+      ]
+    },
+    {
+      "id": "PARIS9471",
+      "name": "Pyramides",
+      "normalized_names": [
+        "pyramides"
+      ],
+      "latitude": 48.8657281,
+      "longitude": 2.3344815,
+      "line_ids": [
+        "15092",
+        "8818"
+      ]
+    },
+    {
+      "id": "PARIS9473",
+      "name": "Les Gobelins",
+      "normalized_names": [
+        "les gobelins"
+      ],
+      "latitude": 48.83583275,
+      "longitude": 2.352442,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "PARIS9474",
+      "name": "Louis Blanc",
+      "normalized_names": [
+        "louis blanc"
+      ],
+      "latitude": 48.881249333333336,
+      "longitude": 2.364787,
+      "line_ids": [
+        "15092",
+        "8567"
+      ]
+    },
+    {
+      "id": "PARIS9475",
+      "name": "Maison Blanche",
+      "normalized_names": [
+        "maison blanche"
+      ],
+      "latitude": 48.82202482352941,
+      "longitude": 2.358545705882353,
+      "line_ids": [
+        "15092",
+        "8818"
+      ]
+    },
+    {
+      "id": "PARIS9478",
+      "name": "Cadet",
+      "normalized_names": [
+        "cadet"
+      ],
+      "latitude": 48.876031,
+      "longitude": 2.3440517499999998,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "PARIS9485",
+      "name": "Gambetta",
+      "normalized_names": [
+        "gambetta"
+      ],
+      "latitude": 48.8649676,
+      "longitude": 2.3975955,
+      "line_ids": [
+        "15091",
+        "15097"
+      ]
+    },
+    {
+      "id": "PARIS9487",
+      "name": "Porte des Lilas",
+      "normalized_names": [
+        "porte des lilas"
+      ],
+      "latitude": 48.87688823076923,
+      "longitude": 2.406911846153846,
+      "line_ids": [
+        "15097",
+        "8562"
+      ]
+    },
+    {
+      "id": "PARIS9504",
+      "name": "Duroc",
+      "normalized_names": [
+        "duroc"
+      ],
+      "latitude": 48.84712088888889,
+      "longitude": 2.3163923333333334,
+      "line_ids": [
+        "15096",
+        "15131"
+      ]
+    },
+    {
+      "id": "PARIS9510",
+      "name": "Ségur",
+      "normalized_names": [
+        "segur"
+      ],
+      "latitude": 48.847039,
+      "longitude": 2.3073205999999997,
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "id": "PARIS9516",
+      "name": "Charles Michels",
+      "normalized_names": [
+        "charles michels"
+      ],
+      "latitude": 48.846500400000004,
+      "longitude": 2.285889,
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "id": "PARIS9523",
+      "name": "Jourdain",
+      "normalized_names": [
+        "jourdain"
+      ],
+      "latitude": 48.8747166,
+      "longitude": 2.3892661,
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "id": "PARIS9524",
+      "name": "Belleville",
+      "normalized_names": [
+        "belleville"
+      ],
+      "latitude": 48.87200107142858,
+      "longitude": 2.376655857142857,
+      "line_ids": [
+        "15094",
+        "8562"
+      ]
+    },
+    {
+      "id": "PARIS9525",
+      "name": "Mairie des Lilas",
+      "normalized_names": [
+        "mairie des lilas"
+      ],
+      "latitude": 48.87972291666667,
+      "longitude": 2.416500083333333,
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "id": "PARIS9527",
+      "name": "Cour Saint-Emilion",
+      "normalized_names": [
+        "cour saint emilion"
+      ],
+      "latitude": 48.833448857142855,
+      "longitude": 2.3861695714285713,
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "id": "PARIS9529",
+      "name": "Villiers",
+      "normalized_names": [
+        "villiers"
+      ],
+      "latitude": 48.881219375,
+      "longitude": 2.315534875,
+      "line_ids": [
+        "15091",
+        "15094"
+      ]
+    },
+    {
+      "id": "PARIS9530",
+      "name": "Ternes",
+      "normalized_names": [
+        "ternes"
+      ],
+      "latitude": 48.878216333333334,
+      "longitude": 2.2981806666666666,
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "id": "PARIS9534",
+      "name": "Pigalle",
+      "normalized_names": [
+        "pigalle"
+      ],
+      "latitude": 48.88225175,
+      "longitude": 2.33748425,
+      "line_ids": [
+        "15094",
+        "8563"
+      ]
+    },
+    {
+      "id": "PARIS9535",
+      "name": "Place de Clichy",
+      "normalized_names": [
+        "place de clichy"
+      ],
+      "latitude": 48.8835811,
+      "longitude": 2.3276855999999997,
+      "line_ids": [
+        "15094",
+        "15096"
+      ]
+    },
+    {
+      "id": "PARIS9536",
+      "name": "Monceau",
+      "normalized_names": [
+        "monceau"
+      ],
+      "latitude": 48.88048725,
+      "longitude": 2.3092930000000003,
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "id": "PARIS9537",
+      "name": "Colonel Fabien",
+      "normalized_names": [
+        "colonel fabien"
+      ],
+      "latitude": 48.8775956,
+      "longitude": 2.3704984,
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "id": "PARIS9538",
+      "name": "Courcelles",
+      "normalized_names": [
+        "courcelles"
+      ],
+      "latitude": 48.87924339999999,
+      "longitude": 2.3033842,
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "id": "PARIS9541",
+      "name": "Avron",
+      "normalized_names": [
+        "avron"
+      ],
+      "latitude": 48.851511,
+      "longitude": 2.39822225,
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "id": "PARIS9542",
+      "name": "Blanche",
+      "normalized_names": [
+        "blanche"
+      ],
+      "latitude": 48.88368225,
+      "longitude": 2.33261475,
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "id": "PARIS9543",
+      "name": "Couronnes",
+      "normalized_names": [
+        "couronnes"
+      ],
+      "latitude": 48.86913025,
+      "longitude": 2.3804285,
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "id": "PARIS9545",
+      "name": "Porte de Bagnolet",
+      "normalized_names": [
+        "porte de bagnolet"
+      ],
+      "latitude": 48.864225,
+      "longitude": 2.4078163,
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "id": "PARIS9546",
+      "name": "Porte de Champerret",
+      "normalized_names": [
+        "porte de champerret"
+      ],
+      "latitude": 48.8857418,
+      "longitude": 2.2924409,
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "id": "PARIS9547",
+      "name": "Quatre Septembre",
+      "normalized_names": [
+        "quatre septembre"
+      ],
+      "latitude": 48.869627,
+      "longitude": 2.33650225,
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "id": "PARIS9550",
+      "name": "Sentier",
+      "normalized_names": [
+        "sentier"
+      ],
+      "latitude": 48.867526,
+      "longitude": 2.3464008333333335,
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "id": "PARIS9551",
+      "name": "Malesherbes",
+      "normalized_names": [
+        "malesherbes"
+      ],
+      "latitude": 48.882943,
+      "longitude": 2.3092086000000003,
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "id": "PARIS9553",
+      "name": "Europe",
+      "normalized_names": [
+        "europe"
+      ],
+      "latitude": 48.87879925,
+      "longitude": 2.322511,
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "id": "PARIS9554",
+      "name": "Bourse",
+      "normalized_names": [
+        "bourse"
+      ],
+      "latitude": 48.8688072,
+      "longitude": 2.3409192,
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "id": "PARIS9555",
+      "name": "Louise Michel",
+      "normalized_names": [
+        "louise michel"
+      ],
+      "latitude": 48.8886172,
+      "longitude": 2.2880792,
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "id": "PARIS9559",
+      "name": "Quai de la Gare",
+      "normalized_names": [
+        "quai de la gare"
+      ],
+      "latitude": 48.83704063636364,
+      "longitude": 2.3731425454545456,
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "id": "PARIS9561",
+      "name": "Pasteur",
+      "normalized_names": [
+        "pasteur"
+      ],
+      "latitude": 48.84269957142857,
+      "longitude": 2.312612857142857,
+      "line_ids": [
+        "15215",
+        "8563"
+      ]
+    },
+    {
+      "id": "PARIS9562",
+      "name": "Picpus",
+      "normalized_names": [
+        "picpus"
+      ],
+      "latitude": 48.84507528571429,
+      "longitude": 2.4017565714285714,
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "id": "PARIS9563",
+      "name": "Nationale",
+      "normalized_names": [
+        "nationale"
+      ],
+      "latitude": 48.83296266666667,
+      "longitude": 2.3625168333333333,
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "id": "PARIS9564",
+      "name": "Dupleix",
+      "normalized_names": [
+        "dupleix"
+      ],
+      "latitude": 48.85093085714286,
+      "longitude": 2.292775857142857,
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "id": "PARIS9568",
+      "name": "Cambronne",
+      "normalized_names": [
+        "cambronne"
+      ],
+      "latitude": 48.847713,
+      "longitude": 2.301646375,
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "id": "PARIS9569",
+      "name": "Bel-Air",
+      "normalized_names": [
+        "bel air"
+      ],
+      "latitude": 48.84161833333334,
+      "longitude": 2.4009591666666665,
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "id": "PARIS9570",
+      "name": "Dugommier",
+      "normalized_names": [
+        "dugommier"
+      ],
+      "latitude": 48.838897571428575,
+      "longitude": 2.388850142857143,
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "id": "PARIS9572",
+      "name": "Grands Boulevards",
+      "normalized_names": [
+        "grands boulevards"
+      ],
+      "latitude": 48.87133907692308,
+      "longitude": 2.3439150769230768,
+      "line_ids": [
+        "15093",
+        "15095"
+      ]
+    },
+    {
+      "id": "PARIS9574",
+      "name": "Michel Bizot",
+      "normalized_names": [
+        "michel bizot"
+      ],
+      "latitude": 48.837064,
+      "longitude": 2.4022461428571433,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "PARIS9575",
+      "name": "Montgallet",
+      "normalized_names": [
+        "montgallet"
+      ],
+      "latitude": 48.84417175,
+      "longitude": 2.39023625,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "PARIS9594",
+      "name": "Porte de Montreuil",
+      "normalized_names": [
+        "porte de montreuil"
+      ],
+      "latitude": 48.853426222222225,
+      "longitude": 2.4107892222222223,
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "id": "PARIS9596",
+      "name": "Ranelagh",
+      "normalized_names": [
+        "ranelagh"
+      ],
+      "latitude": 48.8554734,
+      "longitude": 2.2701384,
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "id": "PARIS9598",
+      "name": "Jasmin",
+      "normalized_names": [
+        "jasmin"
+      ],
+      "latitude": 48.8524176,
+      "longitude": 2.26811,
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "id": "PARIS9599",
+      "name": "Exelmans",
+      "normalized_names": [
+        "exelmans"
+      ],
+      "latitude": 48.84265766666667,
+      "longitude": 2.259806166666667,
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "id": "PARIS9600",
+      "name": "Buzenval",
+      "normalized_names": [
+        "buzenval"
+      ],
+      "latitude": 48.8518388,
+      "longitude": 2.4012268,
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "id": "PARIS9603",
+      "name": "Maraîchers",
+      "normalized_names": [
+        "maraichers"
+      ],
+      "latitude": 48.8526865,
+      "longitude": 2.4060592499999998,
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "id": "PARIS9604",
+      "name": "Billancourt",
+      "normalized_names": [
+        "billancourt"
+      ],
+      "latitude": 48.83188966666667,
+      "longitude": 2.237889555555556,
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "id": "PARIS9610",
+      "name": "Rennes",
+      "normalized_names": [
+        "rennes"
+      ],
+      "latitude": 48.848366399999996,
+      "longitude": 2.3279338,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "PARIS9613",
+      "name": "Porte de la Chapelle",
+      "normalized_names": [
+        "porte de la chapelle"
+      ],
+      "latitude": 48.897586777777775,
+      "longitude": 2.359013,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "PARIS9614",
+      "name": "Porte de Versailles",
+      "normalized_names": [
+        "porte de versailles"
+      ],
+      "latitude": 48.83237775,
+      "longitude": 2.287891166666667,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "PARIS9621",
+      "name": "Abbesses",
+      "normalized_names": [
+        "abbesses"
+      ],
+      "latitude": 48.884449,
+      "longitude": 2.3383835,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "PARIS9622",
+      "name": "Mairie d'Issy",
+      "normalized_names": [
+        "mairie d issy"
+      ],
+      "latitude": 48.82436871428571,
+      "longitude": 2.273387,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "PARIS9626",
+      "name": "Porte de Vanves",
+      "normalized_names": [
+        "porte de vanves"
+      ],
+      "latitude": 48.8272910625,
+      "longitude": 2.305372875,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "PARIS9629",
+      "name": "La Fourche",
+      "normalized_names": [
+        "la fourche"
+      ],
+      "latitude": 48.8875308,
+      "longitude": 2.3255144000000003,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "PARIS9630",
+      "name": "Brochant",
+      "normalized_names": [
+        "brochant"
+      ],
+      "latitude": 48.890904818181816,
+      "longitude": 2.319535,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "PARIS9636",
+      "name": "Garibaldi",
+      "normalized_names": [
+        "garibaldi"
+      ],
+      "latitude": 48.90596954545454,
+      "longitude": 2.331876,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "PARIS9641",
+      "name": "Olympiades",
+      "normalized_names": [
+        "olympiades"
+      ],
+      "latitude": 48.82702142857143,
+      "longitude": 2.366762714285714,
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "id": "PARIS9642",
+      "name": "Pierre et Marie Curie",
+      "normalized_names": [
+        "pierre et marie curie"
+      ],
+      "latitude": 48.815802000000005,
+      "longitude": 2.3771274,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "PARIS9646",
+      "name": "Félix Faure",
+      "normalized_names": [
+        "felix faure"
+      ],
+      "latitude": 48.84277483333333,
+      "longitude": 2.2919551666666664,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "PARIS9648",
+      "name": "Liberté",
+      "normalized_names": [
+        "liberte"
+      ],
+      "latitude": 48.826392625,
+      "longitude": 2.406156375,
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "id": "PARIS9654",
+      "name": "Crimée",
+      "normalized_names": [
+        "crimee"
+      ],
+      "latitude": 48.89103471428571,
+      "longitude": 2.3771451428571426,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "PARIS9655",
+      "name": "Château Landon",
+      "normalized_names": [
+        "chateau landon"
+      ],
+      "latitude": 48.8788165,
+      "longitude": 2.36212775,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "PARIS9657",
+      "name": "Pont Marie (Cité des Arts)",
+      "normalized_names": [
+        "pont marie cite des arts"
+      ],
+      "latitude": 48.8536048,
+      "longitude": 2.357133,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "PARIS9658",
+      "name": "Le Kremlin-Bicêtre",
+      "normalized_names": [
+        "le kremlin bicetre"
+      ],
+      "latitude": 48.810280875000004,
+      "longitude": 2.362172,
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "id": "PARIS9667",
+      "name": "Hôtel de Ville",
+      "normalized_names": [
+        "hotel de ville"
+      ],
+      "latitude": 48.85734161538461,
+      "longitude": 2.3520697692307695,
+      "line_ids": [
+        "34915",
+        "8562"
+      ]
+    },
+    {
+      "id": "PARIS9670",
+      "name": "Esplanade de la Défense",
+      "normalized_names": [
+        "esplanade de la defense"
+      ],
+      "latitude": 48.88796785714286,
+      "longitude": 2.2500705714285716,
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "id": "PARIS9672",
+      "name": "Bérault",
+      "normalized_names": [
+        "berault"
+      ],
+      "latitude": 48.845459,
+      "longitude": 2.428989285714286,
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "id": "PARIS9678",
+      "name": "Assemblée Nationale",
+      "normalized_names": [
+        "assemblee nationale"
+      ],
+      "latitude": 48.86105283333333,
+      "longitude": 2.3207858333333333,
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "id": "PARIS9680",
+      "name": "Liège",
+      "normalized_names": [
+        "liege"
+      ],
+      "latitude": 48.8796096,
+      "longitude": 2.3276522,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "PARIS9682",
+      "name": "Gaîté",
+      "normalized_names": [
+        "gaite"
+      ],
+      "latitude": 48.83835591666667,
+      "longitude": 2.3222554166666667,
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "id": "PARIS9686",
+      "name": "Trocadéro",
+      "normalized_names": [
+        "trocadero"
+      ],
+      "latitude": 48.86314118181818,
+      "longitude": 2.2871887272727274,
+      "line_ids": [
+        "15095",
+        "15215"
+      ]
+    },
+    {
+      "id": "PARIS9688",
+      "name": "Pont de Sèvres",
+      "normalized_names": [
+        "pont de sevres"
+      ],
+      "latitude": 48.829886,
+      "longitude": 2.230747222222222,
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "id": "PARIS9693",
+      "name": "Château Rouge",
+      "normalized_names": [
+        "chateau rouge"
+      ],
+      "latitude": 48.887379124999995,
+      "longitude": 2.34952325,
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "id": "PARIS9698",
+      "name": "Jaurès",
+      "normalized_names": [
+        "jaures"
+      ],
+      "latitude": 48.88233123076923,
+      "longitude": 2.370704615384615,
+      "line_ids": [
+        "15094",
+        "15098",
+        "8567"
+      ]
+    },
+    {
+      "id": "PARIS9699",
+      "name": "Laumière",
+      "normalized_names": [
+        "laumiere"
+      ],
+      "latitude": 48.8849225,
+      "longitude": 2.3795842499999997,
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "id": "PARIS9701",
+      "name": "Place des Fêtes",
+      "normalized_names": [
+        "place des fetes"
+      ],
+      "latitude": 48.87685083333333,
+      "longitude": 2.393164666666667,
+      "line_ids": [
+        "8562",
+        "8567"
+      ]
+    },
+    {
+      "id": "PARIS9704",
+      "name": "Sèvres-Lecourbe",
+      "normalized_names": [
+        "sevres lecourbe"
+      ],
+      "latitude": 48.845212333333336,
+      "longitude": 2.3100633333333334,
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "id": "PARIS9705",
+      "name": "Kléber",
+      "normalized_names": [
+        "kleber"
+      ],
+      "latitude": 48.871505,
+      "longitude": 2.2932428000000002,
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "id": "PARIS9710",
+      "name": "Pont de Neuilly",
+      "normalized_names": [
+        "pont de neuilly"
+      ],
+      "latitude": 48.88488785714286,
+      "longitude": 2.259889857142857,
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "id": "PARIS9716",
+      "name": "Porte d'Auteuil",
+      "normalized_names": [
+        "porte d auteuil"
+      ],
+      "latitude": 48.84786885714286,
+      "longitude": 2.2583465714285715,
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "id": "PARIS98644",
+      "name": "Saint-Augustin",
+      "normalized_names": [
+        "saint augustin"
+      ],
+      "latitude": 48.87457375,
+      "longitude": 2.320847375,
+      "line_ids": [
+        "15095"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "station_a": "ITOAUTO100026",
+      "station_b": "ITOAUTO135730",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO100026",
+      "station_b": "PARIS9710",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO101637",
+      "station_b": "ITOAUTO97021",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO101637",
+      "station_b": "PARIS11029",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO104943",
+      "station_b": "PARIS16027",
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO104943",
+      "station_b": "PARIS166078",
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO112960",
+      "station_b": "ITOAUTO134774",
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO116129",
+      "station_b": "ITOAUTO119594",
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO116129",
+      "station_b": "PARIS166889",
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO116624",
+      "station_b": "ITOAUTO120057",
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO116624",
+      "station_b": "PARIS9475",
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO116628",
+      "station_b": "ITOAUTO120057",
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO116628",
+      "station_b": "ITOAUTO134773",
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO119593",
+      "station_b": "ITOAUTO119594",
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO119593",
+      "station_b": "ITOAUTO64042",
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO119595",
+      "station_b": "PARIS166889",
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO119595",
+      "station_b": "PARIS9525",
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO120222",
+      "station_b": "ITOAUTO79197",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO120222",
+      "station_b": "PARIS9594",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO120356",
+      "station_b": "PARIS166078",
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO121276",
+      "station_b": "ITOAUTO74618",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO121276",
+      "station_b": "PARIS166061",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO129561",
+      "station_b": "PARIS166028",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO129562",
+      "station_b": "PARIS166066",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO129562",
+      "station_b": "PARIS166072",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO133130",
+      "station_b": "ITOAUTO96457",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO133130",
+      "station_b": "ITOAUTO96794",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO134773",
+      "station_b": "ITOAUTO134774",
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO135730",
+      "station_b": "PARIS9450",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO135844",
+      "station_b": "PARIS166047",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO135844",
+      "station_b": "PARIS9448",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO135844",
+      "station_b": "PARIS9450",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO135844",
+      "station_b": "PARIS9530",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO135844",
+      "station_b": "PARIS9705",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO135846",
+      "station_b": "PARIS166087",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO135849",
+      "station_b": "ITOAUTO97140",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO137248",
+      "station_b": "ITOAUTO79354",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO137248",
+      "station_b": "ITOAUTO79409",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO63174",
+      "station_b": "ITOAUTO78986",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO63174",
+      "station_b": "ITOAUTO78994",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO63174",
+      "station_b": "PARIS194494",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO63174",
+      "station_b": "PARIS9504",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO63174",
+      "station_b": "PARIS9561",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO63174",
+      "station_b": "PARIS9682",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO66713",
+      "station_b": "PARIS16027",
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO66713",
+      "station_b": "PARIS194562",
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO68811",
+      "station_b": "ITOAUTO68812",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO68811",
+      "station_b": "PARIS166101",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO68812",
+      "station_b": "PARIS166018",
+      "line_ids": [
+        "15061",
+        "15215"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO68812",
+      "station_b": "PARIS166022",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO69075",
+      "station_b": "ITOAUTO79273",
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO69075",
+      "station_b": "PARIS106268",
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO69077",
+      "station_b": "PARIS166097",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO69077",
+      "station_b": "PARIS166118",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO69538",
+      "station_b": "ITOAUTO79295",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO69538",
+      "station_b": "PARIS9555",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO69540",
+      "station_b": "PARIS166085",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO69540",
+      "station_b": "PARIS166087",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO69574",
+      "station_b": "ITOAUTO97121",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO69574",
+      "station_b": "PARIS166055",
+      "line_ids": [
+        "15093",
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO69574",
+      "station_b": "PARIS166081",
+      "line_ids": [
+        "15093",
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO69574",
+      "station_b": "PARIS166096",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO69871",
+      "station_b": "PARIS85134",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO69871",
+      "station_b": "PARIS9642",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO69879",
+      "station_b": "ITOAUTO79798",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO69879",
+      "station_b": "ITOAUTO96905",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO69893",
+      "station_b": "ITOAUTO79190",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO69893",
+      "station_b": "ITOAUTO79209",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO69931",
+      "station_b": "ITOAUTO97133",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO69931",
+      "station_b": "PARIS194630",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO69943",
+      "station_b": "ITOAUTO79209",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO69943",
+      "station_b": "PARIS166050",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO74618",
+      "station_b": "ITOAUTO79051",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO74618",
+      "station_b": "ITOAUTO96460",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO74618",
+      "station_b": "PARIS9448",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO74620",
+      "station_b": "ITOAUTO97136",
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO74620",
+      "station_b": "PARIS206145",
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO75921",
+      "station_b": "PARIS9487",
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO75921",
+      "station_b": "PARIS9701",
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO75923",
+      "station_b": "ITOAUTO79239",
+      "line_ids": [
+        "8567"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO75923",
+      "station_b": "PARIS9698",
+      "line_ids": [
+        "8567"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO76473",
+      "station_b": "PARIS166101",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO76473",
+      "station_b": "PARIS9463",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO76474",
+      "station_b": "PARIS16028",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO76474",
+      "station_b": "PARIS9478",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO77238",
+      "station_b": "PARIS166056",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO77238",
+      "station_b": "PARIS9646",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO78694",
+      "station_b": "ITOAUTO91082",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO78694",
+      "station_b": "PARIS9658",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO78937",
+      "station_b": "PARIS9614",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO78937",
+      "station_b": "PARIS9622",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO78961",
+      "station_b": "PARIS166060",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO78961",
+      "station_b": "PARIS9604",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO78986",
+      "station_b": "PARIS166018",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO78990",
+      "station_b": "ITOAUTO96458",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO78990",
+      "station_b": "PARIS106266",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO78992",
+      "station_b": "PARIS106266",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO78992",
+      "station_b": "PARIS166034",
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO78992",
+      "station_b": "PARIS93400",
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO78994",
+      "station_b": "PARIS9610",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO78995",
+      "station_b": "ITOAUTO79814",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO78995",
+      "station_b": "PARIS166044",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO78997",
+      "station_b": "ITOAUTO79814",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO78997",
+      "station_b": "PARIS166046",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO78997",
+      "station_b": "PARIS9716",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO78999",
+      "station_b": "ITOAUTO97128",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO78999",
+      "station_b": "PARIS106266",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79001",
+      "station_b": "ITOAUTO97129",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79001",
+      "station_b": "PARIS9516",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79003",
+      "station_b": "ITOAUTO79025",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79003",
+      "station_b": "PARIS94332",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79025",
+      "station_b": "ITOAUTO79814",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79025",
+      "station_b": "PARIS9598",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79025",
+      "station_b": "PARIS9716",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79029",
+      "station_b": "ITOAUTO79798",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79029",
+      "station_b": "PARIS166021",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79031",
+      "station_b": "ITOAUTO97129",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79031",
+      "station_b": "PARIS166103",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79043",
+      "station_b": "ITOAUTO79054",
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79043",
+      "station_b": "PARIS9667",
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79048",
+      "station_b": "ITOAUTO79055",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79048",
+      "station_b": "PARIS9449",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79051",
+      "station_b": "PARIS166092",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79053",
+      "station_b": "PARIS137744",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79053",
+      "station_b": "PARIS9686",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79054",
+      "station_b": "ITOAUTO97121",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79054",
+      "station_b": "PARIS166081",
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79054",
+      "station_b": "PARIS93383",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79055",
+      "station_b": "ITOAUTO97122",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79055",
+      "station_b": "PARIS208684",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79055",
+      "station_b": "PARIS9471",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79064",
+      "station_b": "PARIS16028",
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79064",
+      "station_b": "PARIS166081",
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79065",
+      "station_b": "PARIS194562",
+      "line_ids": [
+        "8563",
+        "8818"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79065",
+      "station_b": "PARIS9438",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79065",
+      "station_b": "PARIS9449",
+      "line_ids": [
+        "15093",
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79065",
+      "station_b": "PARIS9471",
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79071",
+      "station_b": "ITOAUTO97131",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79071",
+      "station_b": "PARIS166068",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79087",
+      "station_b": "ITOAUTO79258",
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79087",
+      "station_b": "ITOAUTO96461",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79087",
+      "station_b": "PARIS16028",
+      "line_ids": [
+        "15061",
+        "15098"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79092",
+      "station_b": "ITOAUTO96462",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79092",
+      "station_b": "PARIS9551",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79118",
+      "station_b": "ITOAUTO97133",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79118",
+      "station_b": "PARIS9613",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79135",
+      "station_b": "PARIS9527",
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79135",
+      "station_b": "PARIS9641",
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79137",
+      "station_b": "PARIS194634",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79137",
+      "station_b": "PARIS9648",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79148",
+      "station_b": "PARIS9569",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79148",
+      "station_b": "PARIS9570",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79148",
+      "station_b": "PARIS9574",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79148",
+      "station_b": "PARIS9575",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79177",
+      "station_b": "PARIS16509",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79177",
+      "station_b": "PARIS166062",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79190",
+      "station_b": "PARIS9541",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79196",
+      "station_b": "PARIS166058",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79196",
+      "station_b": "PARIS166062",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79197",
+      "station_b": "PARIS166065",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79209",
+      "station_b": "ITOAUTO79217",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79209",
+      "station_b": "PARIS9485",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79213",
+      "station_b": "ITOAUTO97126",
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79213",
+      "station_b": "PARIS166058",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79213",
+      "station_b": "PARIS166081",
+      "line_ids": [
+        "15095",
+        "15098"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79217",
+      "station_b": "PARIS9543",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79218",
+      "station_b": "PARIS9545",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79221",
+      "station_b": "PARIS166032",
+      "line_ids": [
+        "15097"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79221",
+      "station_b": "PARIS9485",
+      "line_ids": [
+        "15097"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79228",
+      "station_b": "PARIS166081",
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79228",
+      "station_b": "PARIS9524",
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79239",
+      "station_b": "PARIS106267",
+      "line_ids": [
+        "8567"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79258",
+      "station_b": "ITOAUTO79265",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79258",
+      "station_b": "PARIS9440",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79258",
+      "station_b": "PARIS9474",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79258",
+      "station_b": "PARIS9698",
+      "line_ids": [
+        "15094",
+        "15098"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79265",
+      "station_b": "PARIS9654",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79273",
+      "station_b": "ITOAUTO97136",
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79284",
+      "station_b": "PARIS194632",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79284",
+      "station_b": "PARIS9654",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79354",
+      "station_b": "PARIS166078",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79409",
+      "station_b": "ITOAUTO79421",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79798",
+      "station_b": "ITOAUTO79800",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79798",
+      "station_b": "ITOAUTO97123",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79800",
+      "station_b": "PARIS166094",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79801",
+      "station_b": "ITOAUTO97135",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79801",
+      "station_b": "PARIS9451",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79805",
+      "station_b": "ITOAUTO97134",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79805",
+      "station_b": "PARIS106269",
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79805",
+      "station_b": "PARIS208683",
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79805",
+      "station_b": "PARIS9451",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79812",
+      "station_b": "PARIS9559",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79812",
+      "station_b": "PARIS9563",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79814",
+      "station_b": "PARIS9599",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79814",
+      "station_b": "PARIS9716",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79817",
+      "station_b": "ITOAUTO96919",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79817",
+      "station_b": "ITOAUTO97130",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79817",
+      "station_b": "PARIS166027",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79817",
+      "station_b": "PARIS9438",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79842",
+      "station_b": "ITOAUTO97140",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO79842",
+      "station_b": "PARIS9626",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO80178",
+      "station_b": "ITOAUTO93383",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO80178",
+      "station_b": "PARIS9564",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO80181",
+      "station_b": "PARIS166047",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO90761",
+      "station_b": "PARIS9672",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO90893",
+      "station_b": "PARIS166028",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO90893",
+      "station_b": "PARIS194632",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO91082",
+      "station_b": "PARIS166121",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO92401",
+      "station_b": "ITOAUTO97479",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO92401",
+      "station_b": "PARIS9626",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO93383",
+      "station_b": "PARIS9686",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96052",
+      "station_b": "ITOAUTO96898",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96052",
+      "station_b": "PARIS166110",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96053",
+      "station_b": "ITOAUTO96898",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96053",
+      "station_b": "ITOAUTO97141",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96062",
+      "station_b": "PARIS9670",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96457",
+      "station_b": "PARIS9648",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96458",
+      "station_b": "PARIS9473",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96460",
+      "station_b": "PARIS166061",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96460",
+      "station_b": "PARIS167848",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96460",
+      "station_b": "PARIS9449",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96461",
+      "station_b": "PARIS166049",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96461",
+      "station_b": "PARIS9440",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96461",
+      "station_b": "PARIS9693",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96462",
+      "station_b": "PARIS9546",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96794",
+      "station_b": "ITOAUTO97141",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96904",
+      "station_b": "PARIS106266",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96904",
+      "station_b": "PARIS9657",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96905",
+      "station_b": "PARIS166042",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96905",
+      "station_b": "PARIS166067",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96905",
+      "station_b": "PARIS9610",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96919",
+      "station_b": "PARIS194562",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96919",
+      "station_b": "PARIS9438",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO96919",
+      "station_b": "PARIS98644",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97021",
+      "station_b": "PARIS9613",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97022",
+      "station_b": "PARIS166074",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97022",
+      "station_b": "PARIS9629",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97121",
+      "station_b": "ITOAUTO97151",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97121",
+      "station_b": "PARIS9550",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97122",
+      "station_b": "PARIS208683",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97123",
+      "station_b": "ITOAUTO97128",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97125",
+      "station_b": "ITOAUTO97134",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97125",
+      "station_b": "PARIS166053",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97126",
+      "station_b": "PARIS194369",
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97129",
+      "station_b": "PARIS137745",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97129",
+      "station_b": "PARIS9510",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97129",
+      "station_b": "PARIS9564",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97129",
+      "station_b": "PARIS9568",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97130",
+      "station_b": "PARIS9438",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97130",
+      "station_b": "PARIS9572",
+      "line_ids": [
+        "15093",
+        "15095"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97131",
+      "station_b": "PARIS194562",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97132",
+      "station_b": "PARIS166071",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97132",
+      "station_b": "PARIS174244",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97132",
+      "station_b": "PARIS9621",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97133",
+      "station_b": "PARIS166071",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97133",
+      "station_b": "PARIS174244",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97133",
+      "station_b": "PARIS9693",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97134",
+      "station_b": "PARIS16509",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97134",
+      "station_b": "PARIS9575",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97135",
+      "station_b": "PARIS166054",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97151",
+      "station_b": "PARIS166014",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97217",
+      "station_b": "PARIS166020",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97217",
+      "station_b": "PARIS9456",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97325",
+      "station_b": "PARIS166020",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97325",
+      "station_b": "PARIS9456",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97479",
+      "station_b": "PARIS9682",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO99166",
+      "station_b": "ITOAUTO99201",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO99166",
+      "station_b": "PARIS166118",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO99643",
+      "station_b": "PARIS9642",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "PARIS106267",
+      "station_b": "PARIS166033",
+      "line_ids": [
+        "8567"
+      ]
+    },
+    {
+      "station_a": "PARIS106267",
+      "station_b": "PARIS9701",
+      "line_ids": [
+        "8567"
+      ]
+    },
+    {
+      "station_a": "PARIS106268",
+      "station_b": "PARIS9699",
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "station_a": "PARIS106269",
+      "station_b": "PARIS9527",
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "station_a": "PARIS106269",
+      "station_b": "PARIS9559",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "PARIS106269",
+      "station_b": "PARIS9570",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "PARIS137744",
+      "station_b": "PARIS9596",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "PARIS137745",
+      "station_b": "PARIS9646",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "PARIS16027",
+      "station_b": "PARIS166085",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "PARIS16027",
+      "station_b": "PARIS9630",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "PARIS16028",
+      "station_b": "PARIS166096",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "PARIS16028",
+      "station_b": "PARIS9655",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "PARIS16509",
+      "station_b": "PARIS9445",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "PARIS16509",
+      "station_b": "PARIS9541",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "PARIS16509",
+      "station_b": "PARIS9562",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "PARIS16509",
+      "station_b": "PARIS9600",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "PARIS166014",
+      "station_b": "PARIS208683",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "PARIS166017",
+      "station_b": "PARIS9451",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "PARIS166017",
+      "station_b": "PARIS9667",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "PARIS166018",
+      "station_b": "PARIS9456",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "PARIS166020",
+      "station_b": "PARIS166021",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "PARIS166022",
+      "station_b": "PARIS166097",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "PARIS166025",
+      "station_b": "PARIS9463",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "PARIS166025",
+      "station_b": "PARIS9475",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "PARIS166027",
+      "station_b": "PARIS9478",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "PARIS166032",
+      "station_b": "PARIS9487",
+      "line_ids": [
+        "15097"
+      ]
+    },
+    {
+      "station_a": "PARIS166033",
+      "station_b": "PARIS166100",
+      "line_ids": [
+        "8567"
+      ]
+    },
+    {
+      "station_a": "PARIS166034",
+      "station_b": "PARIS166036",
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "station_a": "PARIS166036",
+      "station_b": "PARIS9463",
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "station_a": "PARIS166042",
+      "station_b": "PARIS9504",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "PARIS166044",
+      "station_b": "PARIS94332",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "PARIS166049",
+      "station_b": "PARIS9534",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "PARIS166050",
+      "station_b": "PARIS166081",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "PARIS166053",
+      "station_b": "PARIS9451",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "PARIS166054",
+      "station_b": "PARIS166081",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "PARIS166055",
+      "station_b": "PARIS9572",
+      "line_ids": [
+        "15093",
+        "15095"
+      ]
+    },
+    {
+      "station_a": "PARIS166056",
+      "station_b": "PARIS85132",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "PARIS166060",
+      "station_b": "PARIS9599",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "PARIS166061",
+      "station_b": "PARIS194562",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "PARIS166061",
+      "station_b": "PARIS98644",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "PARIS166066",
+      "station_b": "PARIS9561",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "PARIS166067",
+      "station_b": "PARIS166088",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "PARIS166068",
+      "station_b": "PARIS9534",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "PARIS166072",
+      "station_b": "PARIS9614",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "PARIS166073",
+      "station_b": "PARIS194367",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "PARIS166073",
+      "station_b": "PARIS9504",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "PARIS166074",
+      "station_b": "PARIS9636",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "PARIS166078",
+      "station_b": "PARIS9636",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "PARIS166081",
+      "station_b": "PARIS93383",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "PARIS166088",
+      "station_b": "PARIS9678",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "PARIS166092",
+      "station_b": "PARIS9686",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "PARIS166094",
+      "station_b": "PARIS208683",
+      "line_ids": [
+        "15061"
+      ]
+    },
+    {
+      "station_a": "PARIS166100",
+      "station_b": "PARIS9701",
+      "line_ids": [
+        "8567"
+      ]
+    },
+    {
+      "station_a": "PARIS166102",
+      "station_b": "PARIS9686",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "PARIS166102",
+      "station_b": "PARIS9705",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "PARIS166103",
+      "station_b": "PARIS167848",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "PARIS166104",
+      "station_b": "PARIS9445",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "PARIS166104",
+      "station_b": "PARIS9672",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "PARIS166105",
+      "station_b": "PARIS85134",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "PARIS166105",
+      "station_b": "PARIS9475",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "PARIS167848",
+      "station_b": "PARIS194367",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "PARIS167848",
+      "station_b": "PARIS9449",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "PARIS193022",
+      "station_b": "PARIS9529",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "PARIS193022",
+      "station_b": "PARIS9535",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "PARIS194369",
+      "station_b": "PARIS9451",
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "station_a": "PARIS194494",
+      "station_b": "PARIS9561",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "PARIS194562",
+      "station_b": "PARIS9553",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "PARIS194562",
+      "station_b": "PARIS9680",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "PARIS194634",
+      "station_b": "PARIS9574",
+      "line_ids": [
+        "15093"
+      ]
+    },
+    {
+      "station_a": "PARIS204776",
+      "station_b": "PARIS9523",
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "station_a": "PARIS204776",
+      "station_b": "PARIS9524",
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "station_a": "PARIS208683",
+      "station_b": "PARIS208684",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "PARIS208683",
+      "station_b": "PARIS9471",
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "station_a": "PARIS208683",
+      "station_b": "PARIS9657",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "PARIS208683",
+      "station_b": "PARIS9667",
+      "line_ids": [
+        "34915",
+        "8562"
+      ]
+    },
+    {
+      "station_a": "PARIS93400",
+      "station_b": "PARIS9451",
+      "line_ids": [
+        "15098"
+      ]
+    },
+    {
+      "station_a": "PARIS94332",
+      "station_b": "PARIS9516",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "PARIS9438",
+      "station_b": "PARIS9471",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "PARIS9438",
+      "station_b": "PARIS9547",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "PARIS9449",
+      "station_b": "PARIS9678",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "PARIS9463",
+      "station_b": "PARIS9473",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "PARIS9463",
+      "station_b": "PARIS9563",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "PARIS9474",
+      "station_b": "PARIS9655",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "PARIS9474",
+      "station_b": "PARIS9698",
+      "line_ids": [
+        "8567"
+      ]
+    },
+    {
+      "station_a": "PARIS9475",
+      "station_b": "PARIS9641",
+      "line_ids": [
+        "8818"
+      ]
+    },
+    {
+      "station_a": "PARIS9475",
+      "station_b": "PARIS9658",
+      "line_ids": [
+        "15092"
+      ]
+    },
+    {
+      "station_a": "PARIS9485",
+      "station_b": "PARIS9545",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "PARIS9487",
+      "station_b": "PARIS9525",
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "station_a": "PARIS9504",
+      "station_b": "PARIS9510",
+      "line_ids": [
+        "15131"
+      ]
+    },
+    {
+      "station_a": "PARIS9523",
+      "station_b": "PARIS9701",
+      "line_ids": [
+        "8562"
+      ]
+    },
+    {
+      "station_a": "PARIS9524",
+      "station_b": "PARIS9537",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "PARIS9524",
+      "station_b": "PARIS9543",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "PARIS9529",
+      "station_b": "PARIS9536",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "PARIS9529",
+      "station_b": "PARIS9551",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "PARIS9529",
+      "station_b": "PARIS9553",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "PARIS9530",
+      "station_b": "PARIS9538",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "PARIS9534",
+      "station_b": "PARIS9542",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "PARIS9534",
+      "station_b": "PARIS9621",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "PARIS9535",
+      "station_b": "PARIS9542",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "PARIS9535",
+      "station_b": "PARIS9629",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "PARIS9535",
+      "station_b": "PARIS9680",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "PARIS9536",
+      "station_b": "PARIS9538",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "PARIS9537",
+      "station_b": "PARIS9698",
+      "line_ids": [
+        "15094"
+      ]
+    },
+    {
+      "station_a": "PARIS9546",
+      "station_b": "PARIS9555",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "PARIS9547",
+      "station_b": "PARIS9554",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "PARIS9550",
+      "station_b": "PARIS9554",
+      "line_ids": [
+        "15091"
+      ]
+    },
+    {
+      "station_a": "PARIS9561",
+      "station_b": "PARIS9704",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "PARIS9562",
+      "station_b": "PARIS9569",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "PARIS9568",
+      "station_b": "PARIS9704",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "PARIS9594",
+      "station_b": "PARIS9603",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "PARIS9596",
+      "station_b": "PARIS9598",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "PARIS9600",
+      "station_b": "PARIS9603",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "PARIS9604",
+      "station_b": "PARIS9688",
+      "line_ids": [
+        "15095"
+      ]
+    },
+    {
+      "station_a": "PARIS9629",
+      "station_b": "PARIS9630",
+      "line_ids": [
+        "15096"
+      ]
+    },
+    {
+      "station_a": "PARIS9670",
+      "station_b": "PARIS9710",
+      "line_ids": [
+        "34915"
+      ]
+    },
+    {
+      "station_a": "PARIS9698",
+      "station_b": "PARIS9699",
+      "line_ids": [
+        "15098"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#12233f">
+    <meta name="description" content="Build the longest possible chain of adjacent Paris Métro stations.">
+    <title>Paris Métro Chain</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="game-panel" aria-labelledby="game-title">
+        <header class="masthead">
+          <p class="eyebrow">A network puzzle</p>
+          <h1 id="game-title">Paris Métro<br><span>Chain</span></h1>
+          <p class="intro">Start anywhere. Each next station must be one stop away and cannot have appeared earlier in your chain.</p>
+        </header>
+
+        <div class="score-card" aria-label="Current score">
+          <span class="score-card__label">Stations chained</span>
+          <output id="score" class="score-card__value">0</output>
+        </div>
+
+        <form id="station-form" class="station-form" autocomplete="off">
+          <label for="station-input">Next station</label>
+          <div class="station-form__row">
+            <input id="station-input" name="station" list="station-list" placeholder="e.g. Nation" required aria-describedby="input-help">
+            <button type="submit">Add</button>
+          </div>
+          <datalist id="station-list"></datalist>
+          <p id="input-help" class="field-help">Type a name, or choose a highlighted station on the map.</p>
+        </form>
+
+        <p id="status" class="status" aria-live="polite">Choose any station to begin.</p>
+
+        <section class="chain-card" aria-labelledby="chain-title">
+          <div class="section-heading">
+            <h2 id="chain-title">Your chain</h2>
+            <span id="chain-line" class="section-heading__meta">No stations yet</span>
+          </div>
+          <ol id="chain-list" class="chain-list">
+            <li class="chain-empty">Your route will appear here.</li>
+          </ol>
+        </section>
+
+        <div class="actions">
+          <button id="restart-button" class="button-secondary" type="button">Start over</button>
+          <button id="copy-button" class="button-secondary" type="button" disabled>Copy chain</button>
+        </div>
+      </section>
+
+      <section class="map-panel" aria-labelledby="map-heading">
+        <div class="map-topline">
+          <div>
+            <p class="eyebrow">Paris · 16 lines · 324 stations</p>
+            <h2 id="map-heading">Where will you go next?</h2>
+          </div>
+          <div class="legend" aria-label="Map legend">
+            <span><i class="legend__dot legend__dot--current"></i>Current</span>
+            <span><i class="legend__dot legend__dot--valid"></i>Next</span>
+            <span><i class="legend__dot legend__dot--used"></i>Used</span>
+          </div>
+        </div>
+        <div class="map-frame">
+          <svg id="metro-map" viewBox="0 0 1000 760" role="img" aria-labelledby="map-title map-description">
+            <title id="map-title">Interactive Paris Métro network</title>
+            <desc id="map-description">Select any station to begin, then select highlighted neighbouring stations to extend your chain.</desc>
+            <g id="map-content"></g>
+          </svg>
+          <div id="map-loading" class="map-loading">Drawing the network…</div>
+        </div>
+        <p class="map-note">Geographic layout · valid neighbouring stations are ringed in red</p>
+      </section>
+    </main>
+
+    <footer>
+      Data: Île-de-France Mobilités / ITO World · Independent project, not affiliated with RATP or Île-de-France Mobilités.
+    </footer>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 
 import { createGraph } from "../public/js/graph.js";
+import { findJumpOptions } from "../public/js/jumps.js";
 
 const data = JSON.parse(readFileSync(new URL("../public/data/metro.json", import.meta.url), "utf8"));
 const graph = createGraph(data);
@@ -82,4 +83,17 @@ test("Châtelet is one station complex serving five Metro lines", () => {
     "Pont Neuf",
     "Pyramides",
   ]);
+});
+
+test("Barbara offers later line 4 hubs with their complete station rewards", () => {
+  const barbaraId = idByName.get("Barbara");
+  const options = findJumpOptions(graph, barbaraId, new Set([barbaraId]));
+  const byName = new Map(options.map((option) => [graph.stationById.get(option.stationId).name, option]));
+
+  assert.deepEqual(
+    byName.get("Denfert-Rochereau").path.map((id) => graph.stationById.get(id).name),
+    ["Mairie de Montrouge", "Porte d'Orléans", "Alésia", "Mouton-Duvernet", "Denfert-Rochereau"],
+  );
+  assert.equal(byName.get("Montparnasse Bienvenue").path.length, 8);
+  assert.equal(byName.get("Porte de Clignancourt").path.length, 27);
 });

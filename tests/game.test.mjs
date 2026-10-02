@@ -5,32 +5,35 @@ import { createGame } from "../public/js/game.js";
 import { createGraph } from "../public/js/graph.js";
 import { graphFixture } from "./fixtures.mjs";
 
-test("accepts adjacent unused stations and rejects other moves", () => {
+test("starts anywhere and accepts a complete valid jump", () => {
   const game = createGame(createGraph(graphFixture));
 
-  assert.equal(game.play("a").kind, "accepted");
-  assert.equal(game.play("c").kind, "not-adjacent");
-  assert.equal(game.play("b").kind, "accepted");
-  assert.equal(game.play("a").kind, "already-used");
-  assert.deepEqual(game.getState().chain, ["a", "b"]);
-  assert.deepEqual(game.getState().validNext, ["c"]);
-  assert.equal(game.play("c").complete, true);
+  assert.equal(game.start("a").kind, "accepted");
+  const option = game.getState().jumpOptions.find(({ stationId }) => stationId === "c");
+  const result = game.jump(option);
+
+  assert.equal(result.kind, "accepted");
+  assert.equal(result.addedCount, 2);
+  assert.deepEqual(game.getState().chain, ["a", "b", "c"]);
+  assert.deepEqual(game.getState().jumpOptions.map(({ stationId }) => stationId).sort(), ["e", "f"]);
 });
 
 test("returns immutable state snapshots and restarts", () => {
   const game = createGame(createGraph(graphFixture));
-  game.play("a");
+  game.start("a");
   const snapshot = game.getState();
   snapshot.chain.push("c");
-  snapshot.validNext.length = 0;
+  snapshot.jumpOptions.length = 0;
 
   assert.deepEqual(game.getState().chain, ["a"]);
-  assert.deepEqual(game.getState().validNext, ["b"]);
+  assert.equal(game.getState().jumpOptions.length, 2);
   game.restart();
-  assert.deepEqual(game.getState(), { chain: [], current: null, score: 0, validNext: [], complete: false });
+  assert.deepEqual(game.getState(), { chain: [], current: null, score: 0, jumpOptions: [], complete: false });
 });
 
-test("rejects an unknown station id", () => {
+test("rejects unknown starts and jumps that are no longer valid", () => {
   const game = createGame(createGraph(graphFixture));
-  assert.deepEqual(game.play("z"), { kind: "unknown-station", state: game.getState() });
+  assert.deepEqual(game.start("z"), { kind: "unknown-station", state: game.getState() });
+  game.start("a");
+  assert.equal(game.jump({ stationId: "e", lineId: "m1", path: ["e"] }).kind, "invalid-jump");
 });

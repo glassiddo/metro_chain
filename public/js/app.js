@@ -1,14 +1,16 @@
-import { createGame } from "./game.js";
-import { createGraph } from "./graph.js";
-import { createStationInput } from "./input.js";
-import { createMetroMap } from "./map.js";
+import { createGame } from "./game.js?v=20261002c";
+import { createGraph } from "./graph.js?v=20261002c";
+import { createMetroMap } from "./map.js?v=20261002c";
 
 const elements = {
-  form: document.querySelector("#station-form"),
   status: document.querySelector("#status"),
   score: document.querySelector("#score"),
   chain: document.querySelector("#chain-list"),
   chainMeta: document.querySelector("#chain-line"),
+  choices: document.querySelector("#choice-grid"),
+  choicesTitle: document.querySelector("#choices-title"),
+  choicesMeta: document.querySelector("#choices-meta"),
+  alphabet: document.querySelector("#alphabet-filter"),
   restart: document.querySelector("#restart-button"),
   copy: document.querySelector("#copy-button"),
   loading: document.querySelector("#map-loading"),
@@ -23,9 +25,15 @@ function setStatus(message, tone = "normal") {
 }
 
 function setControlsDisabled(disabled) {
-  for (const control of elements.form.elements) control.disabled = disabled;
   elements.restart.disabled = disabled;
   elements.copy.disabled = disabled || elements.copy.disabled;
+  for (const button of document.querySelectorAll(".choice-card, .alphabet-filter button")) {
+    button.disabled = disabled;
+  }
+}
+
+function firstLetter(name) {
+  return name.normalize("NFKD").replace(/[\u0300-\u036f]/g, "")[0].toUpperCase();
 }
 
 async function loadGame() {
@@ -33,65 +41,136 @@ async function loadGame() {
   if (!response.ok) throw new Error(`Network data request failed (${response.status})`);
   const graph = createGraph(await response.json());
   const game = createGame(graph);
-  let map;
+  const lineById = new Map(graph.lines.map((line) => [line.id, line]));
+  const stations = [...graph.stations].sort((a, b) => a.name.localeCompare(b.name, "fr"));
+  const letters = [...new Set(stations.map((station) => firstLetter(station.name)))];
+  let selectedLetter = letters[0];
 
-  function stationName(stationId) {
-    return graph.stationById.get(stationId).name;
+  const stationName = (stationId) => graph.stationById.get(stationId).name;
+
+  function button(label, className, onClick) {
+    const element = document.createElement("button");
+    element.type = "button";
+    element.className = className;
+    element.append(label);
+    element.addEventListener("click", onClick);
+    return element;
   }
 
-  function render(state) {
-    elements.score.value = state.score;
-    elements.score.textContent = state.score;
-    elements.copy.disabled = state.chain.length === 0;
-    elements.chainMeta.textContent = state.chain.length === 0 ? "No stations yet" : `${state.chain.length} station${state.chain.length === 1 ? "" : "s"}`;
+  function renderAlphabet() {
+    elements.alphabet.replaceChildren();
+    for (const letter of letters) {
+      const letterButton = button(letter, "alphabet-button", () => {
+        selectedLetter = letter;
+        render(game.getState());
+      });
+      letterButton.setAttribute("aria-pressed", String(letter === selectedLetter));
+      elements.alphabet.append(letterButton);
+    }
+  }
+
+  function renderStartChoices() {
+    elements.choicesTitle.textContent = "Choose a starting station";
+    elements.choicesMeta.textContent = `Stations beginning with ${selectedLetter}`;
+    elements.alphabet.hidden = false;
+    renderAlphabet();
+    for (const station of stations.filter(({ name }) => firstLetter(name) === selectedLetter)) {
+      const name = document.createElement("span");
+      name.className = "choice-card__name";
+      name.textContent = station.name;
+      elements.choices.append(button(name, "choice-card choice-card--start", () => {
+        const result = game.start(station.id);
+        render(result.state);
+        setStatus(`${station.name} selected. Choose a hub or terminus to jump to.`);
+      }));
+    }
+  }
+
+  function renderJumpChoices(state) {
+    elements.choicesTitle.textContent = "Next choices";
+    elements.choicesMeta.textContent = `${state.jumpOptions.length} available`;
+    elements.alphabet.hidden = true;
+
+    for (const option of state.jumpOptions) {
+      const line = lineById.get(option.lineId);
+      const name = document.createElement("span");
+      name.className = "choice-card__name";
+      name.textContent = stationName(option.stationId);
+      const detail = document.createElement("span");
+      detail.className = "choice-card__detail";
+      const lineBadge = document.createElement("span");
+      lineBadge.className = "line-badge";
+      lineBadge.style.setProperty("--line-color", line.color);
+      lineBadge.textContent = `Line ${line.name}`;
+      const gain = document.createElement("strong");
+      gain.textContent = `+${option.path.length}`;
+      detail.append(lineBadge, gain);
+
+      const choice = button(name, "choice-card", () => {
+        const from = state.current;
+        const result = game.jump(option);
+        if (result.kind !== "accepted") return;
+        render(result.state);
+        setStatus(
+          `${stationName(from)} → ${stationName(option.stationId)} via line ${line.name} · ` +
+          `${result.addedCount} station${result.addedCount === 1 ? "" : "s"} added.`,
+          result.complete ? "complete" : "normal",
+        );
+      });
+      choice.append(detail);
+      elements.choices.append(choice);
+    }
+
+    if (!state.jumpOptions.length) {
+      const message = document.createElement("p");
+      message.className = "choice-empty";
+      message.textContent = "No unused hub or terminus can be reached from here.";
+      elements.choices.append(message);
+    }
+  }
+
+  function renderChain(state) {
     elements.chain.replaceChildren();
-    if (state.chain.length === 0) {
+    if (!state.chain.length) {
       const empty = document.createElement("li");
       empty.className = "chain-empty";
       empty.textContent = "Your route will appear here.";
       elements.chain.append(empty);
-    } else {
-      for (const stationId of state.chain) {
-        const item = document.createElement("li");
-        item.textContent = stationName(stationId);
-        elements.chain.append(item);
-      }
-      elements.chain.lastElementChild?.scrollIntoView({ block: "nearest" });
+      return;
     }
+    for (const stationId of state.chain) {
+      const item = document.createElement("li");
+      item.textContent = stationName(stationId);
+      elements.chain.append(item);
+    }
+    elements.chain.scrollTop = elements.chain.scrollHeight;
+  }
+
+  const map = createMetroMap(elements.svg, graph);
+
+  function render(state) {
+    elements.score.value = state.score;
+    elements.score.textContent = state.score;
+    elements.copy.disabled = !state.chain.length;
+    elements.chainMeta.textContent = state.chain.length
+      ? `${state.chain.length} station${state.chain.length === 1 ? "" : "s"}`
+      : "No stations yet";
+    elements.choices.replaceChildren();
+    if (state.current) renderJumpChoices(state);
+    else renderStartChoices();
+    renderChain(state);
     map.render(state);
   }
 
-  function selectStation(stationId) {
-    const result = game.play(stationId);
-    if (result.kind === "already-used") {
-      setStatus(`${stationName(stationId)} is already in your chain.`, "error");
-    } else if (result.kind === "not-adjacent") {
-      setStatus(`${stationName(stationId)} is not one stop from ${stationName(result.state.current)}.`, "error");
-    } else if (result.kind === "unknown-station") {
-      setStatus("That station is not in this Métro network.", "error");
-    } else {
-      render(result.state);
-      if (result.complete) {
-        setStatus(`Dead end at ${stationName(result.current)}. Final score: ${result.score}.`, "complete");
-      } else {
-        setStatus(`${stationName(result.current)} added. ${result.validNext.length} unused neighbour${result.validNext.length === 1 ? "" : "s"} available.`);
-      }
-    }
-    return result;
-  }
-
-  map = createMetroMap(elements.svg, graph, selectStation);
-  const stationInput = createStationInput(elements.form, graph, selectStation);
   render(game.getState());
   elements.loading.hidden = true;
   setControlsDisabled(false);
 
-  elements.form.addEventListener("station-input-error", (event) => setStatus(event.detail.message, "error"));
   elements.restart.addEventListener("click", () => {
+    selectedLetter = letters[0];
     render(game.restart());
-    stationInput.clear();
-    setStatus("Choose any station to begin.");
-    stationInput.focus();
+    setStatus("Choose a starting station.");
+    elements.choices.querySelector("button")?.focus();
   });
   elements.copy.addEventListener("click", async () => {
     const names = game.getState().chain.map(stationName);

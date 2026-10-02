@@ -57,7 +57,7 @@ button:disabled { cursor: not-allowed; opacity: .45; }
   width: min(1480px, calc(100% - 40px));
   margin: 20px auto;
   display: grid;
-  grid-template-columns: minmax(310px, 400px) minmax(0, 1fr);
+  grid-template-columns: minmax(390px, 480px) minmax(0, 1fr);
   min-height: calc(100vh - 88px);
   background: var(--panel);
   border: 1px solid rgb(19 34 58 / 10%);
@@ -67,6 +67,7 @@ button:disabled { cursor: not-allowed; opacity: .45; }
 }
 
 .game-panel {
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 22px;
@@ -118,43 +119,67 @@ h1 span { color: var(--gold); font-style: italic; }
 .score-card__label { color: #cbd4e2; font-size: .82rem; font-weight: 700; }
 .score-card__value { color: var(--gold); font: 600 2.2rem/1 Georgia, serif; }
 
-.station-form label {
-  display: block;
-  margin-bottom: 8px;
-  font-size: .82rem;
-  font-weight: 800;
-  letter-spacing: .04em;
+.choice-panel { min-width: 0; min-height: 250px; }
+.choice-panel .section-heading { margin-bottom: 12px; }
+
+.alphabet-filter {
+  max-width: 100%;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 12px;
+  padding-bottom: 5px;
+  overflow-x: auto;
 }
+.alphabet-filter[hidden] { display: none; }
+.alphabet-button {
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  color: #cbd4e2;
+  background: rgb(255 255 255 / 8%);
+  font-size: .72rem;
+  font-weight: 800;
+}
+.alphabet-button[aria-pressed="true"] { color: var(--navy); background: var(--gold); }
 
-.station-form__row { display: grid; grid-template-columns: 1fr auto; }
-
-.station-form input {
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+  max-height: 310px;
+  padding: 3px;
+  overflow-y: auto;
+}
+.choice-card {
   min-width: 0;
-  border: 2px solid transparent;
-  border-radius: 10px 0 0 10px;
-  padding: 13px 14px;
-  color: var(--ink);
-  background: #fff;
-}
-
-.station-form input:focus { border-color: var(--gold); outline: 0; }
-
-.station-form button {
-  padding: 0 18px;
-  border-radius: 0 10px 10px 0;
+  min-height: 82px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 11px;
   color: #fff;
-  background: var(--red);
+  background: rgb(255 255 255 / 8%);
+  text-align: left;
+}
+.choice-card:hover { border-color: var(--gold); background: rgb(255 255 255 / 14%); }
+.choice-card__name { overflow-wrap: anywhere; font: 600 .94rem/1.16 Georgia, serif; }
+.choice-card__detail { display: flex; align-items: end; justify-content: space-between; gap: 5px; }
+.choice-card__detail strong { color: var(--gold); font-size: 1.05rem; }
+.line-badge {
+  padding: 4px 6px;
+  border-left: 4px solid var(--line-color);
+  border-radius: 4px;
+  color: #dfe5ee;
+  background: rgb(0 0 0 / 18%);
+  font-size: .61rem;
   font-weight: 800;
 }
-
-.station-form button:hover { background: var(--red-dark); }
-
-.field-help {
-  margin: 7px 0 0;
-  color: #9fadc1;
-  font-size: .76rem;
-  line-height: 1.4;
-}
+.choice-card--start { min-height: 64px; justify-content: center; text-align: center; }
+.choice-empty { grid-column: 1 / -1; color: #aeb9c9; font-size: .82rem; line-height: 1.5; }
 
 .status {
   min-height: 2.7em;
@@ -243,7 +268,7 @@ h1 span { color: var(--gold); font-style: italic; }
 .metro-edge { vector-effect: non-scaling-stroke; stroke-width: 3.2; stroke-linecap: round; opacity: .66; transition: opacity .2s; }
 .metro-edge--muted { opacity: .1; }
 
-.station { cursor: pointer; }
+.station { cursor: default; }
 .station__hit { fill: transparent; }
 .station__dot { fill: #fffdf7; stroke: var(--ink); stroke-width: 1.5; vector-effect: non-scaling-stroke; transition: r .16s, fill .16s, opacity .16s; }
 .station:hover .station__dot, .station:focus .station__dot { stroke-width: 3; }
@@ -275,7 +300,7 @@ footer {
 }
 
 @media (max-width: 960px) {
-  .shell { grid-template-columns: 330px minmax(0, 1fr); }
+  .shell { grid-template-columns: 380px minmax(0, 1fr); }
   .legend { display: none; }
 }
 
@@ -293,6 +318,8 @@ footer {
   h1 { font-size: 3.15rem; }
   .masthead .intro { font-size: .92rem; }
   .chain-list { max-height: 180px; }
+  .choice-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-height: 340px; }
+  .choice-card { min-height: 76px; }
   footer { width: calc(100% - 32px); }
 }
 

@@ -8,8 +8,10 @@ test("page exposes the accessible game controls", () => {
   const html = read("public/index.html");
 
   assert.equal((html.match(/<h1[ >]/g) ?? []).length, 1);
-  assert.match(html, /<label[^>]+for="station-input"/);
-  assert.match(html, /id="station-input"/);
+  assert.match(html, /id="choice-grid"/);
+  assert.match(html, /id="alphabet-filter"/);
+  assert.match(html, /id="choices-title"/);
+  assert.doesNotMatch(html, /id="station-input"/);
   assert.match(html, /aria-live="polite"/);
   assert.match(html, /id="score"/);
   assert.match(html, /id="restart-button"/);
@@ -34,18 +36,17 @@ test("styles cover responsive, focus, motion, and station states", () => {
   }
 });
 
-test("both station inputs use the same app selection callback", () => {
+test("square choice buttons drive starts and jumps", () => {
   const app = read("public/js/app.js");
-  assert.match(app, /createMetroMap\([^;]+selectStation/s);
-  assert.match(app, /createStationInput\([^;]+selectStation/s);
-});
-
-test("restart clears stale typed input through the input controller", () => {
-  const input = read("public/js/input.js");
-  const app = read("public/js/app.js");
-
-  assert.match(input, /clear:\s*\(\)\s*=>/);
-  assert.match(app, /stationInput\.clear\(\)/);
+  const css = read("public/styles.css");
+  assert.match(app, /game\.start\(/);
+  assert.match(app, /game\.jump\(/);
+  assert.match(css, /\.choice-card/);
+  assert.match(css, /\.choice-card\s*\{[^}]*min-height:\s*82px/s);
+  assert.doesNotMatch(css, /aspect-ratio:\s*1/);
+  assert.match(css, /\.game-panel\s*\{[^}]*min-width:\s*0/s);
+  assert.match(app, /chain\.scrollTop\s*=\s*elements\.chain\.scrollHeight/);
+  assert.doesNotMatch(app, /scrollIntoView/);
 });
 
 test("load failures expose a real retry action", () => {

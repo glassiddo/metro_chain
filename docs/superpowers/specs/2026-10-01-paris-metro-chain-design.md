@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Paris Métro Chain is an untimed route-building game inspired by JetPunk's country-chain quiz. A player starts at any Paris Métro station and repeatedly chooses an unused station directly adjacent to the current station. The run ends when the current station has no unused neighbours.
+Paris Métro Chain is an untimed route-building game inspired by JetPunk's country-chain quiz. A player starts at any Paris Métro station and jumps along a line to later interchanges or termini. Every intermediate stop is collected automatically. The run ends when no offered jump avoids the stations already used.
 
 The first release will be a standalone static website. It will use a small derived dataset copied from the existing Chronométro project while leaving that project unchanged.
 
@@ -14,14 +14,14 @@ The source snapshot yields 321 normalized Métro station complexes after duplica
 
 The first release includes:
 
-- typed station entry;
-- station selection by clicking the map;
-- highlighted valid neighbours;
+- square click-only station choices;
+- alphabetic starting-station filters;
+- jump rewards showing the number of intermediate stations collected;
+- highlighted jump destinations on a geographic route map;
 - current, used, available, and unavailable station states;
 - chain length as the score;
 - automatic dead-end detection;
 - restart and copy-chain controls;
-- case-, accent-, and punctuation-insensitive station matching;
 - responsive desktop and mobile layouts;
 - local-only gameplay with no account or backend.
 
@@ -30,14 +30,15 @@ The first release does not include a timer, undo, hints beyond valid-neighbour h
 ## Game Rules
 
 1. The first move may select any station.
-2. Every later move must select a station joined to the current station by a direct consecutive-stop edge on at least one Métro line.
-3. A station may appear only once in a chain.
-4. A move is valid regardless of which line supplied the previous edge; interchange stations allow the chain to continue along any Métro line serving that station.
-5. If multiple lines directly connect the same station pair, the graph stores one edge with all applicable line identifiers.
-6. The run ends immediately when the current station has no unused neighbouring stations.
-7. The score is the number of stations in the completed or current chain.
+2. Every later move selects any downstream interchange or terminus reachable along one line.
+3. Every consecutive stop between the current station and destination is added to the chain and score.
+4. A jump is unavailable when its path crosses a station already used.
+5. Interchange stations allow the next jump to use any Métro line serving that station.
+6. When several routes reach the same destination, the shortest valid route is offered.
+7. The run ends when the current station has no valid jump destination.
+8. The score is the number of stations in the completed or current chain.
 
-Typing and clicking invoke the same validation path. Invalid typed names remain visible with a concise error. Invalid map clicks do not change the chain and provide visible feedback.
+All moves use visible buttons. Starting stations are grouped by initial letter; later buttons show destination, line, and stations gained.
 
 ## Data Extraction
 
@@ -91,44 +92,36 @@ The project will use a lightweight static stack: semantic HTML, CSS, and browser
 The code is divided into focused modules:
 
 - `graph.js` loads and indexes stations, edges, aliases, and adjacency.
-- `game.js` owns the chain state and implements move validation, scoring, restart, and dead-end detection.
-- `map.js` projects station coordinates into SVG space, draws line segments and station markers, and updates visual states.
-- `input.js` handles typed suggestions, submission, keyboard interaction, and shared error messages.
-- `app.js` connects the modules and renders the chain and controls.
+- `jumps.js` finds downstream interchanges and termini on each line and returns their complete paths.
+- `game.js` owns the chain state and implements start, jump validation, scoring, restart, and dead-end detection.
+- `map.js` projects station coordinates into SVG space, draws line segments and station markers, and updates route states.
+- `app.js` connects the modules and renders the square choices, chain, and controls.
 
 The game engine has no DOM dependency. It accepts station IDs and returns state transitions, allowing rules to be tested independently from the interface.
 
 ## Map and Interaction Design
 
-The map is an original geographic rendering generated from station coordinates and graph edges. Edges use their Métro line colours. Shared edges may use a neutral treatment or parallel strokes where legibility permits. Station labels appear selectively to avoid clutter; focused, hovered, current, and valid-neighbour stations always show their names.
+The map is an original geographic rendering generated from station coordinates and graph edges. Edges use their Métro line colours. Station labels appear selectively to avoid clutter. The map shows route context; the square button grid is the primary game control.
 
-At the start, all stations are selectable. After the first move:
+At the start, alphabet buttons reveal square starting-station buttons. After the first move:
 
 - the current station is visually dominant;
-- unused adjacent stations are highlighted and clickable;
+- every valid downstream interchange or terminus appears as a square choice showing its line and reward;
+- available destinations are highlighted on the map;
 - previous stations remain visible as the chain;
 - other stations and edges are muted;
-- the input remains focused on desktop after every move.
 
-On mobile, the map sits above a compact input and chain panel. Touch targets are enlarged independently of marker size. The chain panel scrolls to the latest move.
-
-The typed input offers matching station suggestions but does not reveal whether a suggestion is a legal next move until submitted. This preserves recall while the map still communicates valid click targets.
+On mobile, the map sits above the choice and chain panel. The square choices remain large enough for touch, and the chain panel scrolls to the latest move.
 
 ## Error Handling
 
-The interface distinguishes these cases:
-
-- unknown station name;
-- ambiguous normalized name;
-- known station that is not adjacent;
-- station already used;
-- data load failure.
+The interface prevents invalid moves by rendering only valid choices. It reports terminal routes and data-load failures.
 
 Errors are announced accessibly and do not discard the player's existing chain. A data load failure replaces the game controls with a retry message.
 
 ## Accessibility
 
-All game actions are keyboard accessible. Station markers are buttons in the SVG accessibility tree, with station name, served lines, and current availability in their labels. Colour is never the sole indication of state. Focus rings, status text, and adequate touch targets are required.
+All game actions are native buttons and keyboard accessible. Choice cards name the station, line, and reward in text. Colour is never the sole indication of state. Focus rings, status text, and adequate touch targets are required.
 
 Reduced-motion preferences disable nonessential transitions. The interface uses French station names but English game instructions initially; the text is kept centralized so French localization can be added later.
 
@@ -142,10 +135,10 @@ Automated checks cover:
 - symmetric adjacency and deduplicated edges;
 - representative branches and interchanges;
 - name normalization and aliases;
-- valid, invalid, repeated, and terminal moves in the game engine;
-- equivalent outcomes for typed and clicked moves.
+- downstream hub and terminus discovery on each served line;
+- intermediate-station scoring, blocked used paths, invalid jumps, and terminal states.
 
-Browser verification covers desktop and narrow mobile layouts, keyboard-only play, map clicking, restart, copy-chain behaviour, and automatic completion at a dead end.
+Browser verification covers desktop and narrow mobile layouts, keyboard-only buttons, start filtering, multi-station jumps, restart, copy-chain behaviour, and automatic completion at a dead end.
 
 ## Delivery
 

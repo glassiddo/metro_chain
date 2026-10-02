@@ -61,6 +61,42 @@ class ExtractMetroTests(unittest.TestCase):
             extract_network(json.loads(path.read_text(encoding="utf-8")))
             self.assertEqual(path.read_bytes(), before)
 
+    def test_adds_common_station_aliases(self):
+        source = {
+            "routes": {"m14": {"mode": "metro", "name": "14", "color": "#62259d"}},
+            "directions": {"m14:0": {"routeId": "m14", "stations": ["orly"]}},
+            "stations": {
+                "orly": {
+                    "name": "Aéroport d’Orly (Terminaux 1-2-3)",
+                    "lat": 48.7,
+                    "lon": 2.3,
+                }
+            },
+        }
+
+        [station] = extract_network(source)["stations"]
+        self.assertIn("orly", station["normalized_names"])
+        self.assertIn("aeroport d orly", station["normalized_names"])
+
+    def test_merges_duplicate_source_records_for_one_station_complex(self):
+        source = {
+            "routes": {"m4": {"mode": "metro", "name": "4", "color": "#be418d"}},
+            "directions": {
+                "m4:0": {"routeId": "m4", "stations": ["north", "dup-a", "south"]},
+                "m4:1": {"routeId": "m4", "stations": ["south", "dup-b", "north"]},
+            },
+            "stations": {
+                "north": {"name": "North", "lat": 48.9, "lon": 2.3},
+                "dup-a": {"name": "Same Station", "lat": 48.8, "lon": 2.3},
+                "dup-b": {"name": "Same Station", "lat": 48.8001, "lon": 2.3001},
+                "south": {"name": "South", "lat": 48.7, "lon": 2.3},
+            },
+        }
+
+        result = extract_network(source)
+        self.assertEqual([s["name"] for s in result["stations"]].count("Same Station"), 1)
+        self.assertEqual(len(result["edges"]), 2)
+
 
 if __name__ == "__main__":
     unittest.main()

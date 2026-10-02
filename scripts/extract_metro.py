@@ -12,7 +12,19 @@ from typing import Any
 
 
 EXPECTED_LINE_COUNT = 16
-EXPECTED_STATION_COUNT = 324
+EXPECTED_STATION_COUNT = 321
+
+COMPLEX_NAME_BY_SOURCE_NAME = {
+    "Gare Montparnasse": "Montparnasse Bienvenue",
+}
+
+ALIASES_BY_STATION_NAME = {
+    "Aéroport d’Orly (Terminaux 1-2-3)": ["Aéroport d’Orly", "Orly"],
+    "Bibliothèque François Mitterrand": ["BNF"],
+    "Charles de Gaulle - Étoile": ["CDG Étoile"],
+    "Franklin D. Roosevelt": ["Franklin Roosevelt"],
+    "Montparnasse Bienvenue": ["Montparnasse", "Gare Montparnasse"],
+}
 
 
 def normalize_name(value: str) -> str:
@@ -49,13 +61,47 @@ def extract_network(source: dict[str, Any]) -> dict[str, Any]:
         key=_line_sort_key,
     )
 
+    source_stations = source.get("stations", {})
+    referenced_station_ids = sorted(
+        {
+            station_id
+            for direction in source.get("directions", {}).values()
+            if direction.get("routeId") in metro_route_ids
+            for station_id in direction.get("stations", [])
+        }
+    )
+    station_ids_by_name: dict[str, list[str]] = defaultdict(list)
+    canonical_name_by_key: dict[str, str] = {}
+    for station_id in referenced_station_ids:
+        source_name = source_stations[station_id]["name"]
+        canonical_name = COMPLEX_NAME_BY_SOURCE_NAME.get(source_name, source_name)
+        key = normalize_name(canonical_name)
+        station_ids_by_name[key].append(station_id)
+        canonical_name_by_key[key] = canonical_name
+
+    representative_by_name = {
+        key: min(
+            station_ids,
+            key=lambda station_id: (
+                source_stations[station_id]["name"] != canonical_name_by_key[key],
+                station_id,
+            ),
+        )
+        for key, station_ids in station_ids_by_name.items()
+    }
+    canonical_id: dict[str, str] = {}
+    for station_id in referenced_station_ids:
+        source_name = source_stations[station_id]["name"]
+        canonical_name = COMPLEX_NAME_BY_SOURCE_NAME.get(source_name, source_name)
+        canonical_id[station_id] = representative_by_name[normalize_name(canonical_name)]
+
     edge_lines: dict[tuple[str, str], set[str]] = defaultdict(set)
     station_lines: dict[str, set[str]] = defaultdict(set)
     for direction in source.get("directions", {}).values():
         route_id = direction.get("routeId")
         if route_id not in metro_route_ids:
             continue
-        station_ids = direction.get("stations", [])
+        station_ids = [canonical_id[station_id] for station_id in direction.get("stations", [])]
         for station_id in station_ids:
             station_lines[station_id].add(route_id)
         for first, second in zip(station_ids, station_ids[1:]):
@@ -63,15 +109,15 @@ def extract_network(source: dict[str, Any]) -> dict[str, Any]:
                 continue
             edge_lines[tuple(sorted((first, second)))].add(route_id)
 
-    source_stations = source.get("stations", {})
     stations = []
     for station_id in sorted(station_lines):
         station = source_stations[station_id]
+        aliases = [station["name"], *ALIASES_BY_STATION_NAME.get(station["name"], [])]
         stations.append(
             {
                 "id": station_id,
                 "name": station["name"],
-                "normalized_names": [normalize_name(station["name"])],
+                "normalized_names": sorted({normalize_name(name) for name in aliases}),
                 "latitude": station["lat"],
                 "longitude": station["lon"],
                 "line_ids": sorted(station_lines[station_id]),

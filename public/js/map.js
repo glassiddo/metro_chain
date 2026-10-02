@@ -6,6 +6,24 @@ function svgElement(name, attributes = {}) {
   return element;
 }
 
+export function nearestStation(points, stationIds, target) {
+  let nearestId = null;
+  let nearestDistance = Number.POSITIVE_INFINITY;
+  for (const stationId of stationIds) {
+    const point = points.get(stationId);
+    const distance = Math.hypot(point.x - target.x, point.y - target.y);
+    if (distance < nearestDistance) {
+      nearestId = stationId;
+      nearestDistance = distance;
+    }
+  }
+  return nearestId;
+}
+
+export function hitRadiusForScale(scale) {
+  return Math.max(11, 12 / scale);
+}
+
 export function createMetroMap(svg, graph, onStationSelect) {
   const content = svg.querySelector("#map-content");
   const lineById = new Map(graph.lines.map((line) => [line.id, line]));
@@ -22,6 +40,9 @@ export function createMetroMap(svg, graph, onStationSelect) {
   const stationElements = new Map();
   const edgeElements = [];
   const used = new Set();
+  const actionableIds = new Set();
+  const hitTargets = [];
+  let currentStationId = null;
 
   function project(station) {
     const x = padding + ((station.longitude - bounds.minLon) / (bounds.maxLon - bounds.minLon)) * width;
@@ -58,6 +79,20 @@ export function createMetroMap(svg, graph, onStationSelect) {
     labelLayer.append(label);
   }
 
+  function restoreLabel() {
+    if (currentStationId) drawLabel(currentStationId);
+    else labelLayer.replaceChildren();
+  }
+
+  function selectPointerStation(event) {
+    const screenPoint = svg.createSVGPoint();
+    screenPoint.x = event.clientX;
+    screenPoint.y = event.clientY;
+    const mapPoint = screenPoint.matrixTransform(svg.getScreenCTM().inverse());
+    const stationId = nearestStation(points, actionableIds, mapPoint);
+    if (stationId) onStationSelect(stationId);
+  }
+
   for (const station of graph.stations) {
     const point = points.get(station.id);
     const group = svgElement("g", {
@@ -69,13 +104,15 @@ export function createMetroMap(svg, graph, onStationSelect) {
     });
     const title = svgElement("title");
     title.textContent = station.name;
-    group.append(title, svgElement("circle", { class: "station__hit", r: 11 }), svgElement("circle", { class: "station__dot", r: 3.4 }));
+    const hitTarget = svgElement("circle", { class: "station__hit", r: 12 });
+    group.append(title, hitTarget, svgElement("circle", { class: "station__dot", r: 3.4 }));
+    hitTargets.push(hitTarget);
     group.addEventListener("mouseenter", () => drawLabel(station.id));
     group.addEventListener("focus", () => drawLabel(station.id));
-    group.addEventListener("mouseleave", () => labelLayer.replaceChildren());
-    group.addEventListener("blur", () => labelLayer.replaceChildren());
-    group.addEventListener("click", () => {
-      if (group.dataset.actionable === "true") onStationSelect(station.id);
+    group.addEventListener("mouseleave", restoreLabel);
+    group.addEventListener("blur", restoreLabel);
+    group.addEventListener("click", (event) => {
+      if (group.dataset.actionable === "true") selectPointerStation(event);
     });
     group.addEventListener("keydown", (event) => {
       if ((event.key === "Enter" || event.key === " ") && group.dataset.actionable === "true") {
@@ -88,8 +125,18 @@ export function createMetroMap(svg, graph, onStationSelect) {
   }
   content.append(stationLayer, labelLayer);
 
+  function updateHitTargets() {
+    const scale = Math.abs(svg.getScreenCTM()?.a) || 1;
+    const radius = hitRadiusForScale(scale);
+    for (const hitTarget of hitTargets) hitTarget.setAttribute("r", radius);
+  }
+  updateHitTargets();
+  if (typeof ResizeObserver !== "undefined") new ResizeObserver(updateHitTargets).observe(svg);
+
   function render(state) {
+    currentStationId = state.current;
     used.clear();
+    actionableIds.clear();
     state.chain.forEach((stationId) => used.add(stationId));
     const valid = new Set(state.validNext);
     const atStart = state.chain.length === 0;
@@ -100,6 +147,7 @@ export function createMetroMap(svg, graph, onStationSelect) {
       element.classList.toggle("station--used", used.has(stationId) && stationId !== state.current);
       element.classList.toggle("station--muted", !atStart && !valid.has(stationId) && !used.has(stationId));
       element.dataset.actionable = String(actionable);
+      if (actionable) actionableIds.add(stationId);
       element.setAttribute("tabindex", actionable ? "0" : "-1");
       element.setAttribute("aria-disabled", String(!actionable));
     }
@@ -107,7 +155,7 @@ export function createMetroMap(svg, graph, onStationSelect) {
       const active = atStart || used.has(edge.station_a) || used.has(edge.station_b) || valid.has(edge.station_a) || valid.has(edge.station_b);
       element.classList.toggle("metro-edge--muted", !active);
     }
-    if (state.current) drawLabel(state.current);
+    restoreLabel();
   }
 
   return { render };

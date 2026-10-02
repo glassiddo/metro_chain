@@ -3,8 +3,8 @@
     "source_snapshot": "20260630_200738",
     "feed_valid_from": "2026-06-27",
     "feed_valid_to": "2026-07-29",
-    "station_count": 324,
-    "edge_count": 385,
+    "station_count": 321,
+    "edge_count": 381,
     "attribution": "Île-de-France Mobilités / ITO World GTFS export"
   },
   "lines": [
@@ -130,7 +130,9 @@
       "id": "ITOAUTO112960",
       "name": "Aéroport d’Orly (Terminaux 1-2-3)",
       "normalized_names": [
-        "aeroport d orly terminaux 1 2 3"
+        "aeroport d orly",
+        "aeroport d orly terminaux 1 2 3",
+        "orly"
       ],
       "latitude": 48.728422,
       "longitude": 2.3613693529411766,
@@ -334,6 +336,7 @@
       "id": "ITOAUTO135844",
       "name": "Charles de Gaulle - Étoile",
       "normalized_names": [
+        "cdg etoile",
         "charles de gaulle etoile"
       ],
       "latitude": 48.874180224999996,
@@ -378,20 +381,6 @@
       "longitude": 2.356535076923077,
       "line_ids": [
         "15096"
-      ]
-    },
-    {
-      "id": "ITOAUTO63174",
-      "name": "Gare Montparnasse",
-      "normalized_names": [
-        "gare montparnasse"
-      ],
-      "latitude": 48.841388375,
-      "longitude": 2.3204337083333333,
-      "line_ids": [
-        "15096",
-        "15215",
-        "8563"
       ]
     },
     {
@@ -569,7 +558,8 @@
       "id": "ITOAUTO74618",
       "name": "Franklin D. Roosevelt",
       "normalized_names": [
-        "franklin d roosevelt"
+        "franklin d roosevelt",
+        "franklin roosevelt"
       ],
       "latitude": 48.86916183333333,
       "longitude": 2.3087706666666667,
@@ -985,7 +975,8 @@
       "id": "ITOAUTO79135",
       "name": "Bibliothèque François Mitterrand",
       "normalized_names": [
-        "bibliotheque francois mitterrand"
+        "bibliotheque francois mitterrand",
+        "bnf"
       ],
       "latitude": 48.829689692307696,
       "longitude": 2.377086076923077,
@@ -1832,24 +1823,17 @@
       "id": "ITOAUTO97217",
       "name": "Montparnasse Bienvenue",
       "normalized_names": [
+        "gare montparnasse",
+        "montparnasse",
         "montparnasse bienvenue"
       ],
       "latitude": 48.843853,
       "longitude": 2.324329,
       "line_ids": [
-        "15061"
-      ]
-    },
-    {
-      "id": "ITOAUTO97325",
-      "name": "Montparnasse Bienvenue",
-      "normalized_names": [
-        "montparnasse bienvenue"
-      ],
-      "latitude": 48.843914,
-      "longitude": 2.324386,
-      "line_ids": [
-        "15061"
+        "15061",
+        "15096",
+        "15215",
+        "8563"
       ]
     },
     {
@@ -2695,18 +2679,6 @@
       "line_ids": [
         "15093",
         "15096"
-      ]
-    },
-    {
-      "id": "PARIS174244",
-      "name": "Jules Joffrin",
-      "normalized_names": [
-        "jules joffrin"
-      ],
-      "latitude": 48.89249,
-      "longitude": 2.34432,
-      "line_ids": [
-        "8563"
       ]
     },
     {
@@ -4330,48 +4302,6 @@
       ]
     },
     {
-      "station_a": "ITOAUTO63174",
-      "station_b": "ITOAUTO78986",
-      "line_ids": [
-        "15215"
-      ]
-    },
-    {
-      "station_a": "ITOAUTO63174",
-      "station_b": "ITOAUTO78994",
-      "line_ids": [
-        "8563"
-      ]
-    },
-    {
-      "station_a": "ITOAUTO63174",
-      "station_b": "PARIS194494",
-      "line_ids": [
-        "8563"
-      ]
-    },
-    {
-      "station_a": "ITOAUTO63174",
-      "station_b": "PARIS9504",
-      "line_ids": [
-        "15096"
-      ]
-    },
-    {
-      "station_a": "ITOAUTO63174",
-      "station_b": "PARIS9561",
-      "line_ids": [
-        "15215"
-      ]
-    },
-    {
-      "station_a": "ITOAUTO63174",
-      "station_b": "PARIS9682",
-      "line_ids": [
-        "15096"
-      ]
-    },
-    {
       "station_a": "ITOAUTO66713",
       "station_b": "PARIS16027",
       "line_ids": [
@@ -4719,6 +4649,13 @@
     },
     {
       "station_a": "ITOAUTO78986",
+      "station_b": "ITOAUTO97217",
+      "line_ids": [
+        "15215"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO78986",
       "station_b": "PARIS166018",
       "line_ids": [
         "15215"
@@ -4757,6 +4694,13 @@
       "station_b": "PARIS93400",
       "line_ids": [
         "15098"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO78994",
+      "station_b": "ITOAUTO97217",
+      "line_ids": [
+        "8563"
       ]
     },
     {
@@ -5838,13 +5782,6 @@
     },
     {
       "station_a": "ITOAUTO97132",
-      "station_b": "PARIS174244",
-      "line_ids": [
-        "8563"
-      ]
-    },
-    {
-      "station_a": "ITOAUTO97132",
       "station_b": "PARIS9621",
       "line_ids": [
         "8563"
@@ -5853,13 +5790,6 @@
     {
       "station_a": "ITOAUTO97133",
       "station_b": "PARIS166071",
-      "line_ids": [
-        "8563"
-      ]
-    },
-    {
-      "station_a": "ITOAUTO97133",
-      "station_b": "PARIS174244",
       "line_ids": [
         "8563"
       ]
@@ -5908,23 +5838,37 @@
     },
     {
       "station_a": "ITOAUTO97217",
+      "station_b": "PARIS194494",
+      "line_ids": [
+        "8563"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97217",
       "station_b": "PARIS9456",
       "line_ids": [
         "15061"
       ]
     },
     {
-      "station_a": "ITOAUTO97325",
-      "station_b": "PARIS166020",
+      "station_a": "ITOAUTO97217",
+      "station_b": "PARIS9504",
       "line_ids": [
-        "15061"
+        "15096"
       ]
     },
     {
-      "station_a": "ITOAUTO97325",
-      "station_b": "PARIS9456",
+      "station_a": "ITOAUTO97217",
+      "station_b": "PARIS9561",
       "line_ids": [
-        "15061"
+        "15215"
+      ]
+    },
+    {
+      "station_a": "ITOAUTO97217",
+      "station_b": "PARIS9682",
+      "line_ids": [
+        "15096"
       ]
     },
     {

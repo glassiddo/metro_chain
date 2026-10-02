@@ -12,8 +12,8 @@ const neighbourNames = (name) => graph.neighboursOf(idByName.get(name)).map((id)
 test("production graph has the expected fixed snapshot dimensions", () => {
   assert.equal(data.metadata.source_snapshot, "20260630_200738");
   assert.equal(graph.lines.length, 16);
-  assert.equal(graph.stations.length, 324);
-  assert.equal(graph.edges.length, 385);
+  assert.equal(graph.stations.length, 321);
+  assert.equal(graph.edges.length, 381);
 });
 
 test("production edges are unique, valid, and never self-referential", () => {
@@ -37,7 +37,22 @@ test("all stations are connected to one playable component", () => {
     visited.add(stationId);
     queue.push(...graph.neighboursOf(stationId));
   }
-  assert.equal(visited.size, 324);
+  assert.equal(visited.size, 321);
+});
+
+test("production lookup accepts common short station names", () => {
+  const resolvedName = (query) => graph.stationById.get(graph.resolveStation(query).stationId)?.name;
+  assert.equal(resolvedName("orly"), "Aéroport d’Orly (Terminaux 1-2-3)");
+  assert.equal(resolvedName("cdg etoile"), "Charles de Gaulle - Étoile");
+  assert.equal(resolvedName("bnf"), "Bibliothèque François Mitterrand");
+});
+
+test("source duplicates are merged into one station complex", () => {
+  assert.equal(graph.stations.filter((station) => station.name === "Jules Joffrin").length, 1);
+  assert.equal(graph.stations.filter((station) => station.name === "Montparnasse Bienvenue").length, 1);
+  assert.equal(graph.stations.some((station) => station.name === "Gare Montparnasse"), false);
+  assert.equal(idByName.has("Montparnasse Bienvenue"), true);
+  assert.equal(graph.stationById.get(idByName.get("Montparnasse Bienvenue")).line_ids.length, 4);
 });
 
 test("La Fourche retains the two physical line 13 branches", () => {

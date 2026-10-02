@@ -17,6 +17,10 @@ test("page exposes the accessible game controls", () => {
   assert.match(html, /<svg[^>]+id="metro-map"/);
   assert.match(html, /<title[^>]*>.*Paris Métro/i);
   assert.match(html, /<desc[^>]*>/);
+  assert.match(html, /class="skip-link"[^>]+href="#game-content"/);
+  assert.match(html, /<main[^>]+id="game-content"/);
+  assert.doesNotMatch(html, /<svg[^>]+role=/);
+  assert.match(html, /id="retry-button"/);
 });
 
 test("styles cover responsive, focus, motion, and station states", () => {
@@ -42,4 +46,13 @@ test("restart clears stale typed input through the input controller", () => {
 
   assert.match(input, /clear:\s*\(\)\s*=>/);
   assert.match(app, /stationInput\.clear\(\)/);
+});
+
+test("load failures expose a real retry action", () => {
+  const app = read("public/js/app.js");
+
+  assert.match(app, /retry\.addEventListener\("click"/);
+  assert.match(app, /setControlsDisabled\(true\)/);
+  assert.match(app, /await loadGame\(\)/);
+  assert.match(app, /cache:\s*"no-store"/);
 });

@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Build an untimed static Paris Métro chain game supporting typed and clicked moves over a verified 324-station graph.
+**Goal:** Build an untimed static Paris Métro chain game supporting typed and clicked moves over a verified 321-station graph.
 
 **Architecture:** A Python extraction script reads the existing Chronométro Paris network without modifying it and writes a compact deterministic JSON bundle. Browser JavaScript modules keep graph indexing, game rules, SVG rendering, typed input, and page orchestration separate; the rules module has no DOM dependency.
 
@@ -116,7 +116,7 @@ python scripts/extract_metro.py `
   --output public\data\metro.json
 ```
 
-The command must fail with a useful message when the source is absent, assert 16 lines and 324 stations for the production source, create only the output's parent directory, and write UTF-8 JSON with `ensure_ascii=False`, `indent=2`, and a final newline. Store the source snapshot identifier from `source["metadata"]`, but do not store a wall-clock generation time so repeated runs are byte-identical.
+The command must fail with a useful message when the source is absent, assert 16 lines and 321 station complexes for the production source after merging duplicate and split-name source records, create only the output's parent directory, and write UTF-8 JSON with `ensure_ascii=False`, `indent=2`, and a final newline. Store the source snapshot identifier from `source["metadata"]`, but do not store a wall-clock generation time so repeated runs are byte-identical.
 
 - [ ] **Step 4: Run unit tests and generate production data**
 
@@ -128,7 +128,7 @@ python scripts/extract_metro.py --source C:\Users\iddo2\Dropbox\metro\public\dat
 python scripts/extract_metro.py --source C:\Users\iddo2\Dropbox\metro\public\data\paris\network.json --output $env:TEMP\metro-second.json
 ```
 
-Expected: all tests pass, the production file reports 16 lines and 324 stations, and `Compare-Object (Get-Content public\data\metro.json) (Get-Content $env:TEMP\metro-second.json)` prints no differences.
+Expected: all tests pass, the production file reports 16 lines and 321 stations, and `Compare-Object (Get-Content public\data\metro.json) (Get-Content $env:TEMP\metro-second.json)` prints no differences.
 
 - [ ] **Step 5: Document local data generation**
 
@@ -312,7 +312,7 @@ git commit -m "feat: build interactive Metro chain site"
 
 - [ ] **Step 1: Add production graph regression tests**
 
-Load `public/data/metro.json` and assert 16 lines, 324 stations, no self-edges, no dangling endpoints, unique undirected edge keys, and connected reachability across all 324 stations. Add named checks for branches and interchanges: La Fourche has both line 13 branch directions available, Maison Blanche connects line 7 and line 14 continuations through one station node, and Châtelet serves its recorded Métro lines.
+Load `public/data/metro.json` and assert 16 lines, 321 stations, no self-edges, no dangling endpoints, unique undirected edge keys, and connected reachability across all 321 stations. Add named checks for branches and interchanges: La Fourche has both line 13 branch directions available, Maison Blanche connects line 7 and line 14 continuations through one station node, and Châtelet serves its recorded Métro lines.
 
 - [ ] **Step 2: Run all automated verification**
 

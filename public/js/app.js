@@ -12,6 +12,8 @@ const elements = {
   restart: document.querySelector("#restart-button"),
   copy: document.querySelector("#copy-button"),
   loading: document.querySelector("#map-loading"),
+  loadingMessage: document.querySelector("#loading-message"),
+  retry: document.querySelector("#retry-button"),
   svg: document.querySelector("#metro-map"),
 };
 
@@ -20,8 +22,14 @@ function setStatus(message, tone = "normal") {
   elements.status.dataset.tone = tone;
 }
 
-async function start() {
-  const response = await fetch("data/metro.json");
+function setControlsDisabled(disabled) {
+  for (const control of elements.form.elements) control.disabled = disabled;
+  elements.restart.disabled = disabled;
+  elements.copy.disabled = disabled || elements.copy.disabled;
+}
+
+async function loadGame() {
+  const response = await fetch("data/metro.json", { cache: "no-store" });
   if (!response.ok) throw new Error(`Network data request failed (${response.status})`);
   const graph = createGraph(await response.json());
   const game = createGame(graph);
@@ -75,7 +83,8 @@ async function start() {
   map = createMetroMap(elements.svg, graph, selectStation);
   const stationInput = createStationInput(elements.form, graph, selectStation);
   render(game.getState());
-  elements.loading.remove();
+  elements.loading.hidden = true;
+  setControlsDisabled(false);
 
   elements.form.addEventListener("station-input-error", (event) => setStatus(event.detail.message, "error"));
   elements.restart.addEventListener("click", () => {
@@ -95,9 +104,21 @@ async function start() {
   });
 }
 
-start().catch((error) => {
-  console.error(error);
-  elements.loading.textContent = "The network could not be loaded.";
-  elements.form.hidden = true;
-  setStatus("The Métro data could not be loaded. Refresh the page to retry.", "error");
-});
+async function start() {
+  elements.loading.hidden = false;
+  elements.loadingMessage.textContent = "Drawing the network…";
+  elements.retry.hidden = true;
+  setControlsDisabled(true);
+  try {
+    await loadGame();
+  } catch (error) {
+    console.error(error);
+    elements.loadingMessage.textContent = "The network could not be loaded.";
+    elements.retry.hidden = false;
+    setControlsDisabled(true);
+    setStatus("The Métro data could not be loaded. Try loading it again.", "error");
+  }
+}
+
+elements.retry.addEventListener("click", start);
+start();

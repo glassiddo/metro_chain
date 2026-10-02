@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main class="shell">
+    <a class="skip-link" href="#game-content">Skip to game</a>
+    <main id="game-content" class="shell">
       <section class="game-panel" aria-labelledby="game-title">
         <header class="masthead">
           <p class="eyebrow">A network puzzle</p>
@@ -53,7 +54,7 @@
       <section class="map-panel" aria-labelledby="map-heading">
         <div class="map-topline">
           <div>
-            <p class="eyebrow">Paris · 16 lines · 324 stations</p>
+            <p class="eyebrow">Paris · 16 lines · 321 stations</p>
             <h2 id="map-heading">Where will you go next?</h2>
           </div>
           <div class="legend" aria-label="Map legend">
@@ -63,12 +64,15 @@
           </div>
         </div>
         <div class="map-frame">
-          <svg id="metro-map" viewBox="0 0 1000 760" role="img" aria-labelledby="map-title map-description">
+          <svg id="metro-map" viewBox="0 0 1000 760" aria-labelledby="map-title map-description">
             <title id="map-title">Interactive Paris Métro network</title>
             <desc id="map-description">Select any station to begin, then select highlighted neighbouring stations to extend your chain.</desc>
             <g id="map-content"></g>
           </svg>
-          <div id="map-loading" class="map-loading">Drawing the network…</div>
+          <div id="map-loading" class="map-loading">
+            <span id="loading-message">Drawing the network…</span>
+            <button id="retry-button" type="button" hidden>Retry loading</button>
+          </div>
         </div>
         <p class="map-note">Geographic layout · valid neighbouring stations are ringed in red</p>
       </section>
@@ -77,6 +81,6 @@
     <footer>
       Data: Île-de-France Mobilités / ITO World · Independent project, not affiliated with RATP or Île-de-France Mobilités.
     </footer>
-    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/app.js?v=20261002"></script>
   </body>
 </html>

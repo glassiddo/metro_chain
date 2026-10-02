@@ -10,7 +10,7 @@ The first release will be a standalone static website. It will use a small deriv
 
 The game includes all 16 current Paris Métro lines: 1–14, 3bis, and 7bis. It excludes RER, tram, rail, buses, walking connections between separately named stations, and future unopened services.
 
-The source snapshot contains 324 normalized Métro station complexes and 37 directional branch patterns. Interchange platforms belonging to one station complex are represented as one playable station.
+The source snapshot yields 321 normalized Métro station complexes after duplicate records and the split Montparnasse naming are merged, plus 37 directional branch patterns. Interchange platforms belonging to one station complex are represented as one playable station.
 
 The first release includes:
 
@@ -137,7 +137,7 @@ Reduced-motion preferences disable nonessential transitions. The interface uses 
 Automated checks cover:
 
 - deterministic data extraction;
-- exactly 16 Métro routes and 324 station complexes from the current source snapshot;
+- exactly 16 Métro routes and 321 station complexes from the current source snapshot;
 - no self-edges or dangling station references;
 - symmetric adjacency and deduplicated edges;
 - representative branches and interchanges;

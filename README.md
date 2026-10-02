@@ -24,7 +24,7 @@ read-only. Regenerate the browser dataset with the bundled Python runtime:
   --output public\data\metro.json
 ```
 
-The generated graph contains 324 station complexes, 385 undirected
+The generated graph contains 321 station complexes, 381 undirected
 consecutive-stop edges, and lines 1–14, 3bis, and 7bis. RER, tram, other rail,
 buses, and walking links between separately named stations are excluded.
 
@@ -42,7 +42,7 @@ Then open `http://localhost:8000`.
 
 ```powershell
 & 'C:\Users\iddo2\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' -m unittest discover -s tests -p 'test_*.py' -v
-& 'C:\Users\iddo2\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe' --test tests\graph.test.mjs tests\game.test.mjs tests\ui-contract.test.mjs tests\production-network.test.mjs
+& 'C:\Users\iddo2\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe' --test tests\graph.test.mjs tests\game.test.mjs tests\map.test.mjs tests\ui-contract.test.mjs tests\production-network.test.mjs
 ```
 
 ## Attribution

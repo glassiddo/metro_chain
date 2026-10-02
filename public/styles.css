@@ -35,6 +35,19 @@ button {
 
 button:disabled { cursor: not-allowed; opacity: .45; }
 
+.skip-link {
+  position: fixed;
+  z-index: 10;
+  top: 10px;
+  left: 10px;
+  padding: 10px 14px;
+  transform: translateY(-160%);
+  border-radius: 8px;
+  color: #fff;
+  background: var(--navy);
+}
+.skip-link:focus { transform: translateY(0); }
+
 :focus-visible {
   outline: 3px solid #1683c7;
   outline-offset: 3px;
@@ -223,13 +236,15 @@ h1 span { color: var(--gold); font-style: italic; }
 
 .map-frame { position: relative; flex: 1; min-height: 560px; margin-top: 18px; }
 #metro-map { width: 100%; height: 100%; min-height: 560px; overflow: visible; }
-.map-loading { position: absolute; inset: 0; display: grid; place-items: center; color: var(--ink-soft); font: italic 1rem Georgia, serif; }
+.map-loading { position: absolute; inset: 0; display: grid; place-content: center; gap: 12px; text-align: center; color: var(--ink-soft); font: italic 1rem Georgia, serif; }
+.map-loading[hidden] { display: none; }
+.map-loading button { padding: 10px 14px; border-radius: 8px; color: #fff; background: var(--red); font-style: normal; font-weight: 800; }
 
 .metro-edge { vector-effect: non-scaling-stroke; stroke-width: 3.2; stroke-linecap: round; opacity: .66; transition: opacity .2s; }
 .metro-edge--muted { opacity: .1; }
 
 .station { cursor: pointer; }
-.station__hit { fill: transparent; r: 11px; }
+.station__hit { fill: transparent; }
 .station__dot { fill: #fffdf7; stroke: var(--ink); stroke-width: 1.5; vector-effect: non-scaling-stroke; transition: r .16s, fill .16s, opacity .16s; }
 .station:hover .station__dot, .station:focus .station__dot { stroke-width: 3; }
 .station--current .station__dot { r: 7px; fill: var(--red); stroke: #fff; stroke-width: 3; }

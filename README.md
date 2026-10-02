@@ -4,6 +4,11 @@ Build the longest possible chain of Paris Métro stations. Start anywhere, then
 move only to an unused station directly adjacent to the current station. The
 game ends when no unused neighbouring station remains.
 
+Play by typing a station name or clicking a station on the geographic network.
+After the first move, unused neighbouring stations are ringed in red. The game
+is untimed; chain length is the score. The current version has no undo,
+persistent statistics, daily challenge, or non-Métro modes.
+
 ## Data
 
 The browser uses `public/data/metro.json`, a fixed derivative of Chronométro's
@@ -37,7 +42,7 @@ Then open `http://localhost:8000`.
 
 ```powershell
 & 'C:\Users\iddo2\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' -m unittest discover -s tests -p 'test_*.py' -v
-& 'C:\Users\iddo2\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe' --test tests/*.test.mjs
+& 'C:\Users\iddo2\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe' --test tests\graph.test.mjs tests\game.test.mjs tests\ui-contract.test.mjs tests\production-network.test.mjs
 ```
 
 ## Attribution

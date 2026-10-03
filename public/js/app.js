@@ -1,7 +1,7 @@
-import { createGame } from "./game.js?v=20261003b";
-import { createGraph } from "./graph.js?v=20261003b";
-import { createMetroMap } from "./map.js?v=20261003b";
-import { stationsForLine } from "./start-selector.js?v=20261003b";
+import { createGame } from "./game.js?v=20261003c";
+import { createGraph } from "./graph.js?v=20261003c";
+import { createMetroMap } from "./map.js?v=20261003c";
+import { stationsForLine } from "./start-selector.js?v=20261003c";
 
 const elements = {
   status: document.querySelector("#status"),
@@ -17,6 +17,9 @@ const elements = {
   loading: document.querySelector("#map-loading"),
   loadingMessage: document.querySelector("#loading-message"),
   retry: document.querySelector("#retry-button"),
+  zoomIn: document.querySelector("#map-zoom-in"),
+  zoomOut: document.querySelector("#map-zoom-out"),
+  zoomReset: document.querySelector("#map-zoom-reset"),
   svg: document.querySelector("#metro-map"),
 };
 
@@ -87,6 +90,27 @@ async function loadGame() {
   }
 
   function renderJumpChoices(state) {
+    if (state.complete) {
+      elements.choicesTitle.textContent = "Snake complete";
+      elements.choicesMeta.textContent = "Final result";
+      elements.lineFilter.hidden = true;
+      const result = document.createElement("div");
+      result.className = "completion-card";
+      const score = document.createElement("strong");
+      score.textContent = `${state.score} / ${maximumScore}`;
+      const message = document.createElement("p");
+      message.textContent = "No unused route remains. How long can your next snake be?";
+      const actions = document.createElement("div");
+      actions.className = "completion-card__actions";
+      actions.append(
+        button("Play again", "completion-card__primary", () => elements.restart.click()),
+        button("Copy result", "completion-card__secondary", () => elements.copy.click()),
+      );
+      result.append(score, message, actions);
+      elements.choices.append(result);
+      return;
+    }
+
     elements.choicesTitle.textContent = "Next choices";
     elements.choicesMeta.textContent = `${state.jumpOptions.length} available`;
     elements.lineFilter.hidden = true;
@@ -112,8 +136,10 @@ async function loadGame() {
         if (result.kind !== "accepted") return;
         render(result.state);
         setStatus(
-          `${stationName(from)} → ${stationName(option.stationId)} via line ${line.name} · ` +
-          `${result.addedCount} station${result.addedCount === 1 ? "" : "s"} added.`,
+          result.complete
+            ? `Snake complete — ${result.score} / ${maximumScore} stations.`
+            : `${stationName(from)} → ${stationName(option.stationId)} via line ${line.name} · ` +
+              `${result.addedCount} station${result.addedCount === 1 ? "" : "s"} added.`,
           result.complete ? "complete" : "normal",
         );
       });
@@ -121,12 +147,6 @@ async function loadGame() {
       elements.choices.append(choice);
     }
 
-    if (!state.jumpOptions.length) {
-      const message = document.createElement("p");
-      message.className = "choice-empty";
-      message.textContent = "No unused hub or terminus can be reached from here.";
-      elements.choices.append(message);
-    }
   }
 
   function renderChain(state) {
@@ -147,6 +167,9 @@ async function loadGame() {
   }
 
   const map = createMetroMap(elements.svg, graph);
+  elements.zoomIn.addEventListener("click", map.zoomIn);
+  elements.zoomOut.addEventListener("click", map.zoomOut);
+  elements.zoomReset.addEventListener("click", map.resetView);
 
   function render(state) {
     document.body.classList.toggle("game-started", Boolean(state.current));

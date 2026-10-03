@@ -25,6 +25,10 @@ test("page exposes the accessible game controls", () => {
   assert.match(html, /<main[^>]+id="game-content"/);
   assert.doesNotMatch(html, /<svg[^>]+role=/);
   assert.match(html, /id="retry-button"/);
+  assert.match(html, /Paris Métro<br><span>Snake<\/span>/);
+  for (const control of ["map-zoom-in", "map-zoom-out", "map-zoom-reset"]) {
+    assert.match(html, new RegExp(`id="${control}"`));
+  }
 });
 
 test("styles cover responsive, focus, motion, and station states", () => {
@@ -68,6 +72,7 @@ test("score is shown against the exact maximum", () => {
 
 test("rules live on a separate concise page", () => {
   const rules = read("public/rules.html");
+  assert.match(rules, /Paris Métro<br><span>Snake<\/span>/);
   assert.match(rules, /Build one continuous chain/);
   assert.match(rules, /No station can be touched twice/i);
   assert.match(rules, /164 stations/);
@@ -80,4 +85,13 @@ test("the playable panel occupies the first mobile screen", () => {
   assert.match(css, /@media\s*\(max-width:\s*760px\)[\s\S]*\.game-panel\s*\{[^}]*grid-row:\s*1[^}]*height:\s*calc\(100(?:d)?vh\s*-\s*20px\)/);
   assert.match(css, /@media\s*\(max-width:\s*760px\)[\s\S]*\.map-panel\s*\{[^}]*grid-row:\s*2/);
   assert.match(app, /document\.body\.classList\.toggle\("game-started",\s*Boolean\(state\.current\)\)/);
+});
+
+test("a completed chain replaces empty choices with a result card", () => {
+  const app = read("public/js/app.js");
+  assert.match(app, /className\s*=\s*"completion-card"/);
+  assert.match(app, /Snake complete/);
+  assert.match(app, /Play again/);
+  assert.match(app, /state\.score}\s*\/\s*\${maximumScore}/);
+  assert.doesNotMatch(app, /No unused hub or terminus can be reached from here/);
 });

@@ -1,4 +1,4 @@
-# Paris Métro Chain
+# Paris Métro Snake
 
 Play at **[metrochain.netlify.app](https://metrochain.netlify.app/)**.
 

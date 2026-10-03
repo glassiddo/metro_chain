@@ -10,6 +10,10 @@ export function hitRadiusForScale(scale) {
   return Math.max(11, 12 / scale);
 }
 
+export function clampZoom(zoom) {
+  return Math.min(4, Math.max(1, zoom));
+}
+
 function segmentKey(first, second) {
   return [first, second].sort().join("|");
 }
@@ -55,6 +59,33 @@ export function createMetroMap(svg, graph) {
   const used = new Set();
   const hitTargets = [];
   let currentStationId = null;
+  let zoom = 1;
+  let centerX = 500;
+  let centerY = 380;
+  let dragging = null;
+
+  function applyViewBox() {
+    const viewWidth = 1000 / zoom;
+    const viewHeight = 760 / zoom;
+    centerX = Math.min(1000 - viewWidth / 2, Math.max(viewWidth / 2, centerX));
+    centerY = Math.min(760 - viewHeight / 2, Math.max(viewHeight / 2, centerY));
+    svg.setAttribute("viewBox", `${centerX - viewWidth / 2} ${centerY - viewHeight / 2} ${viewWidth} ${viewHeight}`);
+    updateHitTargets();
+  }
+
+  function setZoom(nextZoom) {
+    zoom = clampZoom(nextZoom);
+    applyViewBox();
+  }
+
+  function zoomIn() { setZoom(zoom * 1.35); }
+  function zoomOut() { setZoom(zoom / 1.35); }
+  function resetView() {
+    zoom = 1;
+    centerX = 500;
+    centerY = 380;
+    applyViewBox();
+  }
 
   function project(station) {
     const x = padding + ((station.longitude - bounds.minLon) / (bounds.maxLon - bounds.minLon)) * width;
@@ -123,6 +154,29 @@ export function createMetroMap(svg, graph) {
   updateHitTargets();
   if (typeof ResizeObserver !== "undefined") new ResizeObserver(updateHitTargets).observe(svg);
 
+  svg.addEventListener("wheel", (event) => {
+    event.preventDefault();
+    setZoom(zoom * (event.deltaY < 0 ? 1.18 : 1 / 1.18));
+  }, { passive: false });
+  svg.addEventListener("pointerdown", (event) => {
+    dragging = { x: event.clientX, y: event.clientY, centerX, centerY };
+    svg.setPointerCapture(event.pointerId);
+    svg.classList.add("is-dragging");
+  });
+  svg.addEventListener("pointermove", (event) => {
+    if (!dragging) return;
+    const viewBox = svg.viewBox.baseVal;
+    centerX = dragging.centerX - (event.clientX - dragging.x) * viewBox.width / svg.clientWidth;
+    centerY = dragging.centerY - (event.clientY - dragging.y) * viewBox.height / svg.clientHeight;
+    applyViewBox();
+  });
+  const stopDragging = () => {
+    dragging = null;
+    svg.classList.remove("is-dragging");
+  };
+  svg.addEventListener("pointerup", stopDragging);
+  svg.addEventListener("pointercancel", stopDragging);
+
   function render(state) {
     currentStationId = state.current;
     used.clear();
@@ -145,5 +199,5 @@ export function createMetroMap(svg, graph) {
     restoreLabel();
   }
 
-  return { render };
+  return { render, zoomIn, zoomOut, resetView };
 }

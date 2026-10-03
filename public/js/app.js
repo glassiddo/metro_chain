@@ -1,6 +1,6 @@
-import { createGame } from "./game.js?v=20261002c";
-import { createGraph } from "./graph.js?v=20261002c";
-import { createMetroMap } from "./map.js?v=20261002c";
+import { createGame } from "./game.js?v=20261003a";
+import { createGraph } from "./graph.js?v=20261003a";
+import { createMetroMap } from "./map.js?v=20261003a";
 
 const elements = {
   status: document.querySelector("#status"),
@@ -40,6 +40,7 @@ async function loadGame() {
   const response = await fetch("data/metro.json", { cache: "no-store" });
   if (!response.ok) throw new Error(`Network data request failed (${response.status})`);
   const graph = createGraph(await response.json());
+  const maximumScore = graph.metadata.maximum_score;
   const game = createGame(graph);
   const lineById = new Map(graph.lines.map((line) => [line.id, line]));
   const stations = [...graph.stations].sort((a, b) => a.name.localeCompare(b.name, "fr"));
@@ -150,7 +151,7 @@ async function loadGame() {
 
   function render(state) {
     elements.score.value = state.score;
-    elements.score.textContent = state.score;
+    elements.score.textContent = `${state.score} / ${maximumScore}`;
     elements.copy.disabled = !state.chain.length;
     elements.chainMeta.textContent = state.chain.length
       ? `${state.chain.length} station${state.chain.length === 1 ? "" : "s"}`

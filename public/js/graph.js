@@ -47,6 +47,10 @@ export function createGraph(data) {
   }
 
   return {
+    metadata: {
+      ...data.metadata,
+      optimal_route: [...(data.metadata.optimal_route ?? [])],
+    },
     lines: data.lines.map((line) => ({ ...line })),
     stations,
     stationById,

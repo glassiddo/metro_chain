@@ -1,4 +1,4 @@
-import { findJumpOptions } from "./jumps.js?v=20261002c";
+import { findJumpOptions } from "./jumps.js?v=20261003a";
 
 export function createGame(graph) {
   let chain = [];

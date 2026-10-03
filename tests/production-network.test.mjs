@@ -4,6 +4,7 @@ import test from "node:test";
 
 import { createGraph } from "../public/js/graph.js";
 import { findJumpOptions } from "../public/js/jumps.js";
+import { createGame } from "../public/js/game.js";
 
 const data = JSON.parse(readFileSync(new URL("../public/data/metro.json", import.meta.url), "utf8"));
 const graph = createGraph(data);
@@ -96,4 +97,44 @@ test("Barbara offers later line 4 hubs with their complete station rewards", () 
   );
   assert.equal(byName.get("Montparnasse Bienvenue").path.length, 8);
   assert.equal(byName.get("Porte de Clignancourt").path.length, 27);
+});
+
+test("loop lines offer the longer direction when it collects different stations", () => {
+  const placeDesFetes = idByName.get("Place des Fêtes");
+  const options = findJumpOptions(graph, placeDesFetes, new Set([placeDesFetes]));
+  const longRouteToJaures = options.find((option) =>
+    graph.stationById.get(option.stationId).name === "Jaurès" &&
+    option.path.some((stationId) => graph.stationById.get(stationId).name === "Pré-Saint-Gervais")
+  );
+
+  assert.deepEqual(longRouteToJaures.path.map((id) => graph.stationById.get(id).name), [
+    "Pré-Saint-Gervais",
+    "Danube",
+    "Botzaris",
+    "Buttes Chaumont",
+    "Bolivar",
+    "Jaurès",
+  ]);
+});
+
+test("the stored exact maximum is playable under the game rules", () => {
+  const route = data.metadata.optimal_route;
+  assert.equal(data.metadata.maximum_score, 164);
+  assert.equal(route.length, data.metadata.maximum_score);
+  assert.equal(new Set(route).size, route.length);
+
+  const game = createGame(graph);
+  assert.equal(game.start(route[0]).kind, "accepted");
+  let routeIndex = 1;
+
+  while (routeIndex < route.length) {
+    const option = game.getState().jumpOptions
+      .filter(({ path }) => path.every((stationId, offset) => route[routeIndex + offset] === stationId))
+      .sort((left, right) => right.path.length - left.path.length)[0];
+    assert.ok(option, `no valid jump continues the optimal route at index ${routeIndex}`);
+    assert.equal(game.jump(option).kind, "accepted");
+    routeIndex += option.path.length;
+  }
+
+  assert.equal(game.getState().score, data.metadata.maximum_score);
 });

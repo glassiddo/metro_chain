@@ -14,7 +14,7 @@ test("offers every later interchange and terminus on each current line", () => {
   ]);
 });
 
-test("used stations block jumps and duplicate destinations use the shortest path", () => {
+test("used stations block jumps", () => {
   const graph = createGraph(graphFixture);
   assert.deepEqual(findJumpOptions(graph, "c", new Set(["a", "b", "c"])), [
     { stationId: "e", lineId: "m1", path: ["d", "e"] },

@@ -22,35 +22,33 @@ export function findJumpOptions(graph, currentId, usedStationIds) {
   if (!current) return [];
 
   const lineById = new Map(graph.lines.map((line) => [line.id, line]));
-  const bestByDestination = new Map();
+  const options = [];
   const lineIds = [...current.line_ids].sort((a, b) =>
     lineById.get(a).name.localeCompare(lineById.get(b).name, "fr", { numeric: true }),
   );
 
   for (const lineId of lineIds) {
     const adjacency = lineAdjacency(graph, lineId);
-    const queue = [{ stationId: currentId, path: [] }];
-    const visited = new Set([currentId]);
+    const stack = [{ stationId: currentId, path: [], visited: new Set([currentId]) }];
 
-    while (queue.length) {
-      const { stationId, path } = queue.shift();
-      for (const neighbourId of adjacency.get(stationId) ?? []) {
+    while (stack.length) {
+      const { stationId, path, visited } = stack.pop();
+      for (const neighbourId of [...(adjacency.get(stationId) ?? [])].reverse()) {
         if (visited.has(neighbourId) || usedStationIds.has(neighbourId)) continue;
-        visited.add(neighbourId);
         const nextPath = [...path, neighbourId];
-        queue.push({ stationId: neighbourId, path: nextPath });
+        stack.push({
+          stationId: neighbourId,
+          path: nextPath,
+          visited: new Set([...visited, neighbourId]),
+        });
 
         if (!isJumpDestination(graph, adjacency, neighbourId)) continue;
-        const option = { stationId: neighbourId, lineId, path: nextPath };
-        const previous = bestByDestination.get(neighbourId);
-        if (!previous || option.path.length < previous.path.length) {
-          bestByDestination.set(neighbourId, option);
-        }
+        options.push({ stationId: neighbourId, lineId, path: nextPath });
       }
     }
   }
 
-  return [...bestByDestination.values()].sort((first, second) => {
+  return options.sort((first, second) => {
     const lineOrder = lineById.get(first.lineId).name.localeCompare(
       lineById.get(second.lineId).name,
       "fr",

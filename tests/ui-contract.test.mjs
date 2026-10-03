@@ -14,6 +14,8 @@ test("page exposes the accessible game controls", () => {
   assert.doesNotMatch(html, /id="station-input"/);
   assert.match(html, /aria-live="polite"/);
   assert.match(html, /id="score"/);
+  assert.match(html, /Build one continuous chain/);
+  assert.match(html, /no station can be touched twice/i);
   assert.match(html, /id="restart-button"/);
   assert.match(html, /id="copy-button"/);
   assert.match(html, /<svg[^>]+id="metro-map"/);
@@ -56,4 +58,10 @@ test("load failures expose a real retry action", () => {
   assert.match(app, /setControlsDisabled\(true\)/);
   assert.match(app, /await loadGame\(\)/);
   assert.match(app, /cache:\s*"no-store"/);
+});
+
+test("score is shown against the exact maximum", () => {
+  const app = read("public/js/app.js");
+  assert.match(app, /metadata\.maximum_score/);
+  assert.match(app, /state\.score}\s*\/\s*\${maximumScore}/);
 });

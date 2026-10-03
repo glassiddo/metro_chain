@@ -28,7 +28,22 @@ test("returns immutable state snapshots and restarts", () => {
   assert.deepEqual(game.getState().chain, ["a"]);
   assert.equal(game.getState().jumpOptions.length, 2);
   game.restart();
-  assert.deepEqual(game.getState(), { chain: [], current: null, score: 0, jumpOptions: [], complete: false });
+  assert.deepEqual(game.getState(), { chain: [], current: null, score: 0, jumpOptions: [], complete: false, canUndo: false });
+});
+
+test("undo removes every station added by the previous jump", () => {
+  const game = createGame(createGraph(graphFixture));
+  game.start("a");
+  game.jump(game.getState().jumpOptions.find(({ stationId }) => stationId === "c"));
+  game.jump(game.getState().jumpOptions.find(({ stationId }) => stationId === "f"));
+
+  assert.equal(game.getState().canUndo, true);
+  assert.equal(game.undo().kind, "accepted");
+  assert.deepEqual(game.getState().chain, ["a", "b", "c"]);
+  assert.equal(game.undo().kind, "accepted");
+  assert.deepEqual(game.getState().chain, ["a"]);
+  assert.equal(game.getState().canUndo, false);
+  assert.equal(game.undo().kind, "nothing-to-undo");
 });
 
 test("rejects unknown starts and jumps that are no longer valid", () => {

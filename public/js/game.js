@@ -1,8 +1,9 @@
-import { findJumpOptions } from "./jumps.js?v=20261003c";
+import { findJumpOptions } from "./jumps.js?v=20261003d";
 
 export function createGame(graph) {
   let chain = [];
   let used = new Set();
+  let moveLengths = [];
 
   function getState() {
     const current = chain.at(-1) ?? null;
@@ -13,6 +14,7 @@ export function createGame(graph) {
       score: chain.length,
       jumpOptions: jumpOptions.map((option) => ({ ...option, path: [...option.path] })),
       complete: chain.length > 0 && jumpOptions.length === 0,
+      canUndo: moveLengths.length > 0,
     };
   }
 
@@ -39,6 +41,7 @@ export function createGame(graph) {
 
     chain.push(...option.path);
     for (const stationId of option.path) used.add(stationId);
+    moveLengths.push(option.path.length);
     const nextState = getState();
     return {
       kind: "accepted",
@@ -49,11 +52,20 @@ export function createGame(graph) {
     };
   }
 
+  function undo() {
+    if (!moveLengths.length) return { kind: "nothing-to-undo", state: getState() };
+    chain.splice(-moveLengths.pop());
+    used = new Set(chain);
+    const state = getState();
+    return { kind: "accepted", ...state, state };
+  }
+
   function restart() {
     chain = [];
     used = new Set();
+    moveLengths = [];
     return getState();
   }
 
-  return { getState, start, jump, restart };
+  return { getState, start, jump, undo, restart };
 }

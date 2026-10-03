@@ -235,7 +235,7 @@ h1 span { color: var(--gold); font-style: italic; }
 .chain-list .chain-empty { padding-left: 0; color: #8491a4; list-style: none; font-style: italic; }
 .chain-list .chain-empty::marker { content: ""; }
 
-.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: auto; }
+.actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: auto; }
 
 .button-secondary {
   padding: 11px 14px;

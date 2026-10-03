@@ -1,7 +1,7 @@
-import { createGame } from "./game.js?v=20261003c";
-import { createGraph } from "./graph.js?v=20261003c";
-import { createMetroMap } from "./map.js?v=20261003c";
-import { stationsForLine } from "./start-selector.js?v=20261003c";
+import { createGame } from "./game.js?v=20261003d";
+import { createGraph } from "./graph.js?v=20261003d";
+import { createMetroMap } from "./map.js?v=20261003d";
+import { stationsForLine } from "./start-selector.js?v=20261003d";
 
 const elements = {
   status: document.querySelector("#status"),
@@ -13,6 +13,7 @@ const elements = {
   choicesMeta: document.querySelector("#choices-meta"),
   lineFilter: document.querySelector("#line-filter"),
   restart: document.querySelector("#restart-button"),
+  undo: document.querySelector("#undo-button"),
   copy: document.querySelector("#copy-button"),
   loading: document.querySelector("#map-loading"),
   loadingMessage: document.querySelector("#loading-message"),
@@ -30,6 +31,7 @@ function setStatus(message, tone = "normal") {
 
 function setControlsDisabled(disabled) {
   elements.restart.disabled = disabled;
+  elements.undo.disabled = disabled || elements.undo.disabled;
   elements.copy.disabled = disabled || elements.copy.disabled;
   for (const button of document.querySelectorAll(".choice-card, .line-filter button")) {
     button.disabled = disabled;
@@ -176,6 +178,7 @@ async function loadGame() {
     elements.score.value = state.score;
     elements.score.textContent = `${state.score} / ${maximumScore}`;
     elements.copy.disabled = !state.chain.length;
+    elements.undo.disabled = !state.canUndo;
     elements.chainMeta.textContent = state.chain.length
       ? `${state.chain.length} station${state.chain.length === 1 ? "" : "s"}`
       : "No stations yet";
@@ -195,6 +198,12 @@ async function loadGame() {
     render(game.restart());
     setStatus("Choose a starting station.");
     elements.choices.querySelector("button")?.focus();
+  });
+  elements.undo.addEventListener("click", () => {
+    const result = game.undo();
+    if (result.kind !== "accepted") return;
+    render(result.state);
+    setStatus("Last move undone.");
   });
   elements.copy.addEventListener("click", async () => {
     const names = game.getState().chain.map(stationName);

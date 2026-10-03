@@ -17,6 +17,7 @@ test("page exposes the accessible game controls", () => {
   assert.match(html, /href="rules\.html"[^>]*>How to play/);
   assert.doesNotMatch(html, /class="rules"/);
   assert.match(html, /id="restart-button"/);
+  assert.match(html, /id="undo-button"/);
   assert.match(html, /id="copy-button"/);
   assert.match(html, /<svg[^>]+id="metro-map"/);
   assert.match(html, /<title[^>]*>.*Paris Métro/i);
@@ -94,4 +95,11 @@ test("a completed chain replaces empty choices with a result card", () => {
   assert.match(app, /Play again/);
   assert.match(app, /state\.score}\s*\/\s*\${maximumScore}/);
   assert.doesNotMatch(app, /No unused hub or terminus can be reached from here/);
+});
+
+test("undo control follows the game move history", () => {
+  const app = read("public/js/app.js");
+  assert.match(app, /undo:\s*document\.querySelector\("#undo-button"\)/);
+  assert.match(app, /elements\.undo\.disabled\s*=\s*!state\.canUndo/);
+  assert.match(app, /game\.undo\(\)/);
 });

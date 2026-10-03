@@ -1,6 +1,7 @@
-import { createGame } from "./game.js?v=20261003a";
-import { createGraph } from "./graph.js?v=20261003a";
-import { createMetroMap } from "./map.js?v=20261003a";
+import { createGame } from "./game.js?v=20261003b";
+import { createGraph } from "./graph.js?v=20261003b";
+import { createMetroMap } from "./map.js?v=20261003b";
+import { stationsForLine } from "./start-selector.js?v=20261003b";
 
 const elements = {
   status: document.querySelector("#status"),
@@ -10,7 +11,7 @@ const elements = {
   choices: document.querySelector("#choice-grid"),
   choicesTitle: document.querySelector("#choices-title"),
   choicesMeta: document.querySelector("#choices-meta"),
-  alphabet: document.querySelector("#alphabet-filter"),
+  lineFilter: document.querySelector("#line-filter"),
   restart: document.querySelector("#restart-button"),
   copy: document.querySelector("#copy-button"),
   loading: document.querySelector("#map-loading"),
@@ -27,13 +28,9 @@ function setStatus(message, tone = "normal") {
 function setControlsDisabled(disabled) {
   elements.restart.disabled = disabled;
   elements.copy.disabled = disabled || elements.copy.disabled;
-  for (const button of document.querySelectorAll(".choice-card, .alphabet-filter button")) {
+  for (const button of document.querySelectorAll(".choice-card, .line-filter button")) {
     button.disabled = disabled;
   }
-}
-
-function firstLetter(name) {
-  return name.normalize("NFKD").replace(/[\u0300-\u036f]/g, "")[0].toUpperCase();
 }
 
 async function loadGame() {
@@ -44,8 +41,7 @@ async function loadGame() {
   const game = createGame(graph);
   const lineById = new Map(graph.lines.map((line) => [line.id, line]));
   const stations = [...graph.stations].sort((a, b) => a.name.localeCompare(b.name, "fr"));
-  const letters = [...new Set(stations.map((station) => firstLetter(station.name)))];
-  let selectedLetter = letters[0];
+  let selectedLineId = graph.lines[0].id;
 
   const stationName = (stationId) => graph.stationById.get(stationId).name;
 
@@ -58,24 +54,27 @@ async function loadGame() {
     return element;
   }
 
-  function renderAlphabet() {
-    elements.alphabet.replaceChildren();
-    for (const letter of letters) {
-      const letterButton = button(letter, "alphabet-button", () => {
-        selectedLetter = letter;
+  function renderLineFilter() {
+    elements.lineFilter.replaceChildren();
+    for (const line of graph.lines) {
+      const lineButton = button(line.name, "line-button", () => {
+        selectedLineId = line.id;
         render(game.getState());
       });
-      letterButton.setAttribute("aria-pressed", String(letter === selectedLetter));
-      elements.alphabet.append(letterButton);
+      lineButton.style.setProperty("--line-color", line.color);
+      lineButton.setAttribute("aria-label", `Line ${line.name}`);
+      lineButton.setAttribute("aria-pressed", String(line.id === selectedLineId));
+      elements.lineFilter.append(lineButton);
     }
   }
 
   function renderStartChoices() {
+    const selectedLine = lineById.get(selectedLineId);
     elements.choicesTitle.textContent = "Choose a starting station";
-    elements.choicesMeta.textContent = `Stations beginning with ${selectedLetter}`;
-    elements.alphabet.hidden = false;
-    renderAlphabet();
-    for (const station of stations.filter(({ name }) => firstLetter(name) === selectedLetter)) {
+    elements.choicesMeta.textContent = `Line ${selectedLine.name}`;
+    elements.lineFilter.hidden = false;
+    renderLineFilter();
+    for (const station of stationsForLine(graph, selectedLineId).sort((a, b) => a.name.localeCompare(b.name, "fr"))) {
       const name = document.createElement("span");
       name.className = "choice-card__name";
       name.textContent = station.name;
@@ -90,7 +89,7 @@ async function loadGame() {
   function renderJumpChoices(state) {
     elements.choicesTitle.textContent = "Next choices";
     elements.choicesMeta.textContent = `${state.jumpOptions.length} available`;
-    elements.alphabet.hidden = true;
+    elements.lineFilter.hidden = true;
 
     for (const option of state.jumpOptions) {
       const line = lineById.get(option.lineId);
@@ -150,6 +149,7 @@ async function loadGame() {
   const map = createMetroMap(elements.svg, graph);
 
   function render(state) {
+    document.body.classList.toggle("game-started", Boolean(state.current));
     elements.score.value = state.score;
     elements.score.textContent = `${state.score} / ${maximumScore}`;
     elements.copy.disabled = !state.chain.length;
@@ -168,7 +168,7 @@ async function loadGame() {
   setControlsDisabled(false);
 
   elements.restart.addEventListener("click", () => {
-    selectedLetter = letters[0];
+    selectedLineId = graph.lines[0].id;
     render(game.restart());
     setStatus("Choose a starting station.");
     elements.choices.querySelector("button")?.focus();

@@ -10,6 +10,33 @@ export function hitRadiusForScale(scale) {
   return Math.max(11, 12 / scale);
 }
 
+function segmentKey(first, second) {
+  return [first, second].sort().join("|");
+}
+
+function segmentStates(state) {
+  const used = new Set();
+  for (let index = 1; index < state.chain.length; index += 1) {
+    used.add(segmentKey(state.chain[index - 1], state.chain[index]));
+  }
+  const available = new Set();
+  for (const option of state.jumpOptions) {
+    const route = [state.current, ...option.path];
+    for (let index = 1; index < route.length; index += 1) {
+      available.add(segmentKey(route[index - 1], route[index]));
+    }
+  }
+  return { used, available };
+}
+
+export function edgeState(edge, state) {
+  const states = segmentStates(state);
+  const key = segmentKey(edge.station_a, edge.station_b);
+  if (states.used.has(key)) return "used";
+  if (states.available.has(key)) return "available";
+  return "unused";
+}
+
 export function createMetroMap(svg, graph) {
   const content = svg.querySelector("#map-content");
   const lineById = new Map(graph.lines.map((line) => [line.id, line]));
@@ -108,9 +135,12 @@ export function createMetroMap(svg, graph) {
       element.classList.toggle("station--used", used.has(stationId) && stationId !== state.current);
       element.classList.toggle("station--muted", !atStart && !valid.has(stationId) && !used.has(stationId));
     }
+    const states = segmentStates(state);
     for (const { edge, element } of edgeElements) {
-      const active = atStart || used.has(edge.station_a) || used.has(edge.station_b) || valid.has(edge.station_a) || valid.has(edge.station_b);
-      element.classList.toggle("metro-edge--muted", !active);
+      const key = segmentKey(edge.station_a, edge.station_b);
+      element.classList.toggle("metro-edge--used", states.used.has(key));
+      element.classList.toggle("metro-edge--available", !states.used.has(key) && states.available.has(key));
+      element.classList.toggle("metro-edge--unused", !states.used.has(key) && !states.available.has(key));
     }
     restoreLabel();
   }

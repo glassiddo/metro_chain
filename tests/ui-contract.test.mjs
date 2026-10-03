@@ -9,13 +9,13 @@ test("page exposes the accessible game controls", () => {
 
   assert.equal((html.match(/<h1[ >]/g) ?? []).length, 1);
   assert.match(html, /id="choice-grid"/);
-  assert.match(html, /id="alphabet-filter"/);
+  assert.match(html, /id="line-filter"/);
   assert.match(html, /id="choices-title"/);
   assert.doesNotMatch(html, /id="station-input"/);
   assert.match(html, /aria-live="polite"/);
   assert.match(html, /id="score"/);
-  assert.match(html, /Build one continuous chain/);
-  assert.match(html, /no station can be touched twice/i);
+  assert.match(html, /href="rules\.html"[^>]*>How to play/);
+  assert.doesNotMatch(html, /class="rules"/);
   assert.match(html, /id="restart-button"/);
   assert.match(html, /id="copy-button"/);
   assert.match(html, /<svg[^>]+id="metro-map"/);
@@ -64,4 +64,20 @@ test("score is shown against the exact maximum", () => {
   const app = read("public/js/app.js");
   assert.match(app, /metadata\.maximum_score/);
   assert.match(app, /state\.score}\s*\/\s*\${maximumScore}/);
+});
+
+test("rules live on a separate concise page", () => {
+  const rules = read("public/rules.html");
+  assert.match(rules, /Build one continuous chain/);
+  assert.match(rules, /No station can be touched twice/i);
+  assert.match(rules, /164 stations/);
+  assert.match(rules, /href="index\.html"/);
+});
+
+test("the playable panel occupies the first mobile screen", () => {
+  const css = read("public/styles.css");
+  const app = read("public/js/app.js");
+  assert.match(css, /@media\s*\(max-width:\s*760px\)[\s\S]*\.game-panel\s*\{[^}]*grid-row:\s*1[^}]*height:\s*calc\(100(?:d)?vh\s*-\s*20px\)/);
+  assert.match(css, /@media\s*\(max-width:\s*760px\)[\s\S]*\.map-panel\s*\{[^}]*grid-row:\s*2/);
+  assert.match(app, /document\.body\.classList\.toggle\("game-started",\s*Boolean\(state\.current\)\)/);
 });

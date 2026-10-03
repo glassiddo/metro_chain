@@ -42,7 +42,7 @@ export function findJumpOptions(graph, currentId, usedStationIds) {
           visited: new Set([...visited, neighbourId]),
         });
 
-        if (!isJumpDestination(graph, adjacency, neighbourId)) continue;
+        if (nextPath.length > 1 && !isJumpDestination(graph, adjacency, neighbourId)) continue;
         options.push({ stationId: neighbourId, lineId, path: nextPath });
       }
     }

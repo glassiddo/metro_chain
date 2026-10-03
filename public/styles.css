@@ -183,6 +183,8 @@ h1 span { color: var(--gold); font-style: italic; }
   font-weight: 800;
 }
 .choice-card--start { min-height: 64px; justify-content: center; text-align: center; }
+.choice-card--next { min-height: 62px; border-style: dashed; background: rgb(255 255 255 / 4%); }
+.choice-card--next .line-badge { color: #b9c4d3; background: transparent; }
 .choice-empty { grid-column: 1 / -1; color: #aeb9c9; font-size: .82rem; line-height: 1.5; }
 
 .completion-card { grid-column: 1 / -1; padding: 24px; border: 1px solid rgb(244 189 59 / 48%); border-radius: 14px; background: rgb(244 189 59 / 10%); text-align: center; }

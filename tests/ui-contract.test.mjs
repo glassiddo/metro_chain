@@ -103,3 +103,11 @@ test("undo control follows the game move history", () => {
   assert.match(app, /elements\.undo\.disabled\s*=\s*!state\.canUndo/);
   assert.match(app, /game\.undo\(\)/);
 });
+
+test("ordinary adjacent stations are presented as next-stop choices", () => {
+  const app = read("public/js/app.js");
+  const rules = read("public/rules.html");
+  assert.match(app, /choice-card--next/);
+  assert.match(app, /Next stop/);
+  assert.match(rules, /next stop, or skip ahead/i);
+});

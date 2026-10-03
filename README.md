@@ -7,7 +7,7 @@ Play at **[metrochain.netlify.app](https://metrochain.netlify.app/)**.
 Build one continuous chain through the Paris Métro:
 
 1. Choose any station to start.
-2. Ride one line to an interchange or terminus.
+2. Choose the next stop, or skip ahead to an interchange or terminus.
 3. Every station passed joins your chain and score.
 4. No station can be touched twice.
 

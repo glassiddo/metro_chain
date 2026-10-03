@@ -15,7 +15,7 @@ test("starts anywhere and accepts a complete valid jump", () => {
   assert.equal(result.kind, "accepted");
   assert.equal(result.addedCount, 2);
   assert.deepEqual(game.getState().chain, ["a", "b", "c"]);
-  assert.deepEqual(game.getState().jumpOptions.map(({ stationId }) => stationId).sort(), ["e", "f"]);
+  assert.deepEqual(game.getState().jumpOptions.map(({ stationId }) => stationId).sort(), ["d", "e", "f"]);
 });
 
 test("returns immutable state snapshots and restarts", () => {
@@ -26,7 +26,7 @@ test("returns immutable state snapshots and restarts", () => {
   snapshot.jumpOptions.length = 0;
 
   assert.deepEqual(game.getState().chain, ["a"]);
-  assert.equal(game.getState().jumpOptions.length, 2);
+  assert.equal(game.getState().jumpOptions.length, 3);
   game.restart();
   assert.deepEqual(game.getState(), { chain: [], current: null, score: 0, jumpOptions: [], complete: false, canUndo: false });
 });

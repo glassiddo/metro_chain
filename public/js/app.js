@@ -1,7 +1,7 @@
-import { createGame } from "./game.js?v=20261003d";
-import { createGraph } from "./graph.js?v=20261003d";
-import { createMetroMap } from "./map.js?v=20261003d";
-import { stationsForLine } from "./start-selector.js?v=20261003d";
+import { createGame } from "./game.js?v=20261003e";
+import { createGraph } from "./graph.js?v=20261003e";
+import { createMetroMap } from "./map.js?v=20261003e";
+import { stationsForLine } from "./start-selector.js?v=20261003e";
 
 const elements = {
   status: document.querySelector("#status"),
@@ -119,20 +119,22 @@ async function loadGame() {
 
     for (const option of state.jumpOptions) {
       const line = lineById.get(option.lineId);
+      const destination = graph.stationById.get(option.stationId);
+      const isNextStop = option.path.length === 1 && destination.line_ids.length === 1;
       const name = document.createElement("span");
       name.className = "choice-card__name";
-      name.textContent = stationName(option.stationId);
+      name.textContent = destination.name;
       const detail = document.createElement("span");
       detail.className = "choice-card__detail";
       const lineBadge = document.createElement("span");
       lineBadge.className = "line-badge";
       lineBadge.style.setProperty("--line-color", line.color);
-      lineBadge.textContent = `Line ${line.name}`;
+      lineBadge.textContent = isNextStop ? `Next stop · Line ${line.name}` : `Line ${line.name}`;
       const gain = document.createElement("strong");
       gain.textContent = `+${option.path.length}`;
       detail.append(lineBadge, gain);
 
-      const choice = button(name, "choice-card", () => {
+      const choice = button(name, `choice-card${isNextStop ? " choice-card--next" : ""}`, () => {
         const from = state.current;
         const result = game.jump(option);
         if (result.kind !== "accepted") return;

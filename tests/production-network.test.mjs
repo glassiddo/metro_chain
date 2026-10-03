@@ -117,6 +117,22 @@ test("loop lines offer the longer direction when it collects different stations"
   ]);
 });
 
+test("Invalides can continue one stop when every later hub is blocked", () => {
+  const invalides = idByName.get("Invalides");
+  const used = new Set([
+    invalides,
+    idByName.get("Concorde"),
+    idByName.get("Champs-Élysées - Clemenceau"),
+    idByName.get("La Motte-Picquet - Grenelle"),
+    idByName.get("Duroc"),
+  ]);
+  const destinationNames = findJumpOptions(graph, invalides, used)
+    .map(({ stationId }) => graph.stationById.get(stationId).name);
+
+  assert.ok(destinationNames.includes("La Tour-Maubourg"));
+  assert.ok(destinationNames.includes("Varenne"));
+});
+
 test("the stored exact maximum is playable under the game rules", () => {
   const route = data.metadata.optimal_route;
   assert.equal(data.metadata.maximum_score, 164);

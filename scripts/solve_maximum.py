@@ -43,8 +43,6 @@ def validate_route(network: dict[str, Any], route: list[str]) -> None:
     for first, second in zip(route, route[1:]):
         if frozenset((first, second)) not in edges:
             raise ValueError(f"Route uses a non-edge: {first} -> {second}")
-    if len(route) > 1 and route[-1] not in terminal_station_ids(network):
-        raise ValueError("Route ends at a station that cannot finish a jump")
 
 
 def solve_network(network: dict[str, Any]) -> list[str]:
@@ -131,11 +129,6 @@ def solve_network(network: dict[str, Any]) -> list[str]:
     variable_upper = np.ones(variable_count)
     variable_upper[order_offset:] = node_count - 1
 
-    terminal_ids = terminal_station_ids(network)
-    for node, station_id in enumerate(station_ids):
-        if station_id not in terminal_ids:
-            variable_upper[end_offset + node] = 0
-
     result = milp(
         c=objective,
         integrality=integrality,
@@ -173,7 +166,7 @@ def main() -> None:
     route = solve_network(network)
     network["metadata"]["maximum_score"] = len(route)
     network["metadata"]["optimal_route"] = route
-    network["metadata"]["maximum_method"] = "Exact MILP longest simple path; zero optimality gap"
+    network["metadata"]["maximum_method"] = "Exact MILP longest simple path with any endpoint; zero optimality gap"
     args.data.write_text(
         json.dumps(network, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",

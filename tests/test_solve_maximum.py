@@ -21,8 +21,8 @@ class MaximumSolverTests(unittest.TestCase):
     def test_identifies_line_termini(self):
         self.assertEqual(terminal_station_ids(self.network), {"a", "d"})
 
-    def test_accepts_a_valid_no_repeat_route_ending_at_a_terminus(self):
-        validate_route(self.network, ["a", "b", "c", "d"])
+    def test_accepts_a_valid_no_repeat_route_ending_at_any_station(self):
+        validate_route(self.network, ["a", "b", "c"])
 
     def test_rejects_repeated_and_non_adjacent_stations(self):
         with self.assertRaisesRegex(ValueError, "repeats"):
